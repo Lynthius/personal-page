@@ -1,0 +1,85 @@
+/* Base styles
+--------------------------------------------------------------------------- */
+/* 
+Apply a natural box layout to all elements, but allowing components to change. 
+https://css-tricks.com/box-sizing/ 
+*/
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /* font size 62.5% is equal to 10px (use rem units below) */
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+@font-face {
+    font-family: 'Graphik';
+    src: url('Graphik.TTF');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Graphik-Light', 'Muli', sans-serif;
+    font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Graphik';
+    text-transform: uppercase;
+}
+
+a {
+    font-family: 'Graphik';
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+/* ---------------------------------------------------------------------- */
+
+.hero-section {
+    background: url(/images/hero-image.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 3.5rem;
+    height: 100vh;
+}
+
+.nav__list {
+    margin-top: 0;
+    list-style: none;
+    text-align: right;
+}
+
+.social {
+    position: fixed;
+    left: 3.5rem;
+    bottom: 1.5rem;
+    transform: rotate(-90deg);
+    transform-origin: left top;
+}
+
+.social__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social__item {
+    display: inline-block;
+    padding-right: 1rem;
+}
+
+.hero-heading {
+    text-align: right;
+    margin-top: 37rem;
+    font-size: 10rem;
+}
