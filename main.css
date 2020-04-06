@@ -16,36 +16,35 @@ html {
     box-sizing: inherit;
 }
 
-@font-face {
-    font-family: 'Graphik';
-    src: url('Graphik.TTF');
-}
-
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Graphik-Light', 'Muli', sans-serif;
+    font-family: 'Muli', sans-serif;
     font-size: 1.6rem;
 }
 
 h1,
 h2,
 h3 {
-    font-family: 'Graphik';
+    font-family: 'Muli';
+    font-weight: 700;
     text-transform: uppercase;
 }
 
 a {
-    font-family: 'Graphik';
+    font-family: 'Muli';
     color: #000;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 700;
     text-decoration: none;
 }
 
 /* ---------------------------------------------------------------------- */
 
 .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: url(/images/hero-image.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -79,7 +78,12 @@ a {
 }
 
 .hero-heading {
+    font-size: 7vw;
+    line-height: 7vw;
+    margin: 0 0 -1.5rem 0;
     text-align: right;
-    margin-top: 37rem;
-    font-size: 10rem;
+}
+
+.about {
+    padding: 3.5rem;
 }
