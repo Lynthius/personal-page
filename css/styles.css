@@ -41,6 +41,10 @@ a {
   font-weight: 700;
   text-decoration: none; }
 
+.highlight {
+  background-color: #28bf49;
+  padding: 0 0.5rem 0 0.5rem; }
+
 /* Styles and media queries
 ---------------------------------------------------------------------- */
 .hero-section {
@@ -184,7 +188,15 @@ a {
       margin-bottom: 0.6rem; }
       .navigation__item a {
         text-decoration: none;
-        color: #000; } }
+        color: #000; }
+      .navigation__item a:hover {
+        color: #ffffff;
+        background-color: #000; }
+      .navigation__item--dark-mode {
+        margin-bottom: 0.6rem; }
+        .navigation__item--dark-mode a {
+          text-decoration: none;
+          color: #ffffff; } }
 
 .sr-only {
   position: absolute;
@@ -210,8 +222,10 @@ a {
   .social__item {
     display: inline-block;
     padding-right: 1rem; }
-  .social__link--dark-mode {
+  .social__item--dark-mode-mobile a {
     color: #ffffff; }
+  .social__link {
+    color: #000; }
 
 @media only screen and (min-width: 992px) {
   .social {
@@ -221,8 +235,14 @@ a {
     bottom: 1.8rem;
     transform: rotate(-90deg);
     transform-origin: left top; }
-    .social__link--dark-mode {
-      color: #000; } }
+    .social__item a:hover {
+      border-bottom: 2px solid #000; }
+    .social__item--dark-mode {
+      padding-right: 1rem; }
+      .social__item--dark-mode a {
+        color: #ffffff; }
+      .social__item--dark-mode a:hover {
+        border-bottom: 2px solid #ffffff; } }
 
 .hero-heading {
   position: absolute;
@@ -237,6 +257,19 @@ a {
     font-size: 20vw; }
 
 @media only screen and (min-width: 992px) {
+  .hero-heading {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 7vw;
+    line-height: 7vw;
+    margin: 0 0 -1.5rem 0;
+    padding: 0 3.5rem 3.5rem 0;
+    text-align: right; }
+    .hero-heading--bigger {
+      font-size: unset; } }
+
+@media (max-width: 812px) and (orientation: landscape) {
   .hero-heading {
     position: absolute;
     bottom: 0;
@@ -282,6 +315,30 @@ a {
       width: 32rem;
       margin: 0 0 0 5%; } }
 
+@media only screen and (min-width: 1680px) {
+  .about {
+    padding: 5rem 30rem 5rem 30rem; }
+    .about__image {
+      width: 48rem; } }
+
+@media (max-width: 812px) and (orientation: landscape) {
+  .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 100%; }
+    .about__image {
+      max-width: 40%;
+      align-self: flex-start;
+      width: 22rem;
+      margin: 0 0 0 5%;
+      padding: 0; }
+    .about__text {
+      max-width: 60%; }
+    .about__heading {
+      line-height: 3rem;
+      margin-top: 0; } }
+
 .ornaments {
   z-index: -1;
   margin-top: -4rem;
@@ -299,16 +356,22 @@ a {
   .coffee-beans {
     width: 28rem; } }
 
-@media only screen and (min-width: 1824px) {
+@media only screen and (min-width: 1680px) {
   .coffee-beans {
     width: 39rem; } }
 
 .gallery {
   padding: 5rem 15rem 5rem 15rem;
+  opacity: 50%;
   background-color: grey;
   height: 100vh; }
 
 @media only screen and (min-width: 992px) {
+  .gallery {
+    background-color: grey;
+    height: 100vh; } }
+
+@media only screen and (min-width: 1680px) {
   .gallery {
     background-color: grey;
     height: 100vh; } }
@@ -374,6 +437,10 @@ a {
     width: 16rem;
     height: 4rem;
     margin-top: 1rem; }
+  .contact__button:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border: 1px solid #ffffff; }
 
 @media only screen and (min-width: 992px) {
   .contact {
@@ -391,51 +458,33 @@ a {
       width: 25rem;
       height: 25rem; }
     .contact__greeting {
-      flex: 0 0 100%;
-      order: unset;
-      margin-bottom: 2rem; }
+      order: unset; }
     .contact__heading {
-      color: #ffffff;
       font-size: 7.2rem;
       line-height: 8rem; }
-    .contact__paragraph {
-      color: #ffffff; }
     .contact__message {
       display: flex;
-      justify-content: space-between;
       align-items: center;
       margin-top: 2rem; }
-    .contact__input {
-      font-size: 1.4rem;
-      color: #ffffff;
-      outline: none;
-      border: 2px solid #ffffff;
-      background-color: transparent;
-      width: 38rem;
-      height: 4rem;
-      margin-bottom: 1.6rem;
-      padding: 1.6rem; }
     .contact__area {
-      font-size: 1.4rem;
-      color: #ffffff;
-      outline: none;
-      resize: none;
-      border: 2px solid #ffffff;
-      background-color: transparent;
       width: 38rem;
-      height: 16rem;
-      margin-top: 1.6rem;
-      margin-bottom: 1.6rem;
-      padding: 1.6rem; }
+      height: 16rem; }
     .contact__button {
-      outline: none;
-      text-transform: uppercase;
-      font-weight: 800;
-      font-size: 1.4rem;
-      background-color: #ffffff;
-      width: 16rem;
-      height: 4rem;
       margin-top: 1.6rem; } }
+
+@media only screen and (min-width: 1680px) {
+  .contact {
+    padding: 2rem 30rem 5rem 30rem; }
+    .contact__image {
+      align-self: flex-start;
+      width: 30rem;
+      height: 30rem; }
+    .contact__message {
+      display: flex;
+      align-items: flex-start; }
+    .contact__area {
+      width: 58rem;
+      height: 26rem; } }
 
 footer {
   border-top: 0.4px solid rgba(255, 255, 255, 0.2); }
@@ -447,8 +496,33 @@ footer {
   color: #ffffff;
   padding: 4rem 2rem 4rem 2rem; }
   .collaborate__cv {
+    width: 15rem;
     color: #ffffff;
     margin-top: 2rem; }
+    .collaborate__cv::after {
+      position: relative;
+      content: url("/images/arrow.svg");
+      margin-left: 1rem;
+      top: 0; }
+    .collaborate__cv:hover::after {
+      content: url("/images/arrow.svg");
+      animation-name: arrow;
+      animation-duration: 700ms;
+      transform-origin: 50% 50%;
+      animation-iteration-count: infinite;
+      animation-timing-function: linear; }
+
+@keyframes arrow {
+  0% {
+    top: -1px; }
+  25% {
+    top: 2px; }
+  50% {
+    top: 3px; }
+  75% {
+    top: 2px; }
+  100% {
+    top: -1px; } }
 
 .social-footer {
   display: flex;
@@ -497,3 +571,7 @@ footer {
     background-color: #000; }
     .copyright__paragraph {
       margin: 0; } }
+
+@media only screen and (min-width: 992px) and (min-width: 1680px) {
+  footer {
+    padding: 5rem 30rem 5rem 30rem; } }
