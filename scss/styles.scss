@@ -63,7 +63,7 @@ a {
 .hero-section {
   display: flex;
   position: relative;
-  background: url(/images/hero-image3.png);
+  background: url(/images/hero-image.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 22%;
@@ -511,6 +511,22 @@ a {
   }
 }
 
+.coffee-container {
+  order: 1;
+  margin: 3rem 0 3rem 0;
+  position: relative;
+  width: 24rem;
+  height: 24rem;
+}
+
+.coffee-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: circle(32% at 50% 45%);
+  width: 24rem;
+}
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -520,10 +536,10 @@ a {
   background-color: #000;
 
   &__image {
-    order: 1;
-    margin: 3rem 0 3rem 0;
-    width: 25rem;
-    height: 25rem;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 24rem;
   }
 
   &__greeting {
@@ -597,6 +613,14 @@ a {
 }
 
 @media only screen and (min-width: 992px) {
+  .coffee-container {
+    order: 1;
+    margin: 3rem 0 3rem 0;
+    position: relative;
+    width: 28rem;
+    height: 28rem;
+  }
+
   .contact {
     display: flex;
     flex-direction: row;
@@ -609,9 +633,10 @@ a {
     height: 100vh;
 
     &__image {
-      order: unset;
-      width: 25rem;
-      height: 25rem;
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 24rem;
     }
 
     &__greeting {
@@ -641,13 +666,23 @@ a {
 }
 
 @media only screen and (min-width: 1680px) {
+
+  .coffee-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(32% at 50% 45%);
+    width: 28rem;
+  }
+
   .contact {
     padding: 2rem 30rem 5rem 30rem;
 
     &__image {
-      align-self: flex-start;
-      width: 30rem;
-      height: 30rem;
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 28rem;
     }
 
     &__message {
@@ -657,7 +692,7 @@ a {
 
     &__area {
       width: 58rem;
-      height: 26rem;
+      height: 28rem;
     }
   }
 }

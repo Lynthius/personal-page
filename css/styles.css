@@ -54,7 +54,7 @@ a {
 .hero-section {
   display: flex;
   position: relative;
-  background: url(/images/hero-image3.png);
+  background: url(/images/hero-image.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 22%;
@@ -383,6 +383,20 @@ a {
     background-color: grey;
     height: 100vh; } }
 
+.coffee-container {
+  order: 1;
+  margin: 3rem 0 3rem 0;
+  position: relative;
+  width: 24rem;
+  height: 24rem; }
+
+.coffee-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: circle(32% at 50% 45%);
+  width: 24rem; }
+
 .contact {
   display: flex;
   flex-direction: column;
@@ -391,10 +405,10 @@ a {
   padding: 4rem 2rem 6rem 2rem;
   background-color: #000; }
   .contact__image {
-    order: 1;
-    margin: 3rem 0 3rem 0;
-    width: 25rem;
-    height: 25rem; }
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 24rem; }
   .contact__greeting {
     width: 100%;
     order: 2;
@@ -450,6 +464,12 @@ a {
     border: 1px solid #ffffff; }
 
 @media only screen and (min-width: 992px) {
+  .coffee-container {
+    order: 1;
+    margin: 3rem 0 3rem 0;
+    position: relative;
+    width: 28rem;
+    height: 28rem; }
   .contact {
     display: flex;
     flex-direction: row;
@@ -461,9 +481,10 @@ a {
     background-color: #000;
     height: 100vh; }
     .contact__image {
-      order: unset;
-      width: 25rem;
-      height: 25rem; }
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 24rem; }
     .contact__greeting {
       order: unset; }
     .contact__heading {
@@ -480,18 +501,25 @@ a {
       margin-top: 1.6rem; } }
 
 @media only screen and (min-width: 1680px) {
+  .coffee-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(32% at 50% 45%);
+    width: 28rem; }
   .contact {
     padding: 2rem 30rem 5rem 30rem; }
     .contact__image {
-      align-self: flex-start;
-      width: 30rem;
-      height: 30rem; }
+      top: 0;
+      left: 0;
+      position: absolute;
+      width: 28rem; }
     .contact__message {
       display: flex;
       align-items: flex-start; }
     .contact__area {
       width: 58rem;
-      height: 26rem; } }
+      height: 28rem; } }
 
 footer {
   border-top: 0.4px solid rgba(255, 255, 255, 0.2); }
