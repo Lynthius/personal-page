@@ -55,6 +55,10 @@ a {
 
 /* Styles and media queries
 ---------------------------------------------------------------------- */
+.hero-canvas {
+  height: 100vh;
+  display: none;
+}
 
 .hero-section {
   display: flex;
@@ -63,13 +67,19 @@ a {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 22%;
-  padding: 0 1.6rem 0 1.6rem;
+  // padding: 0 1.6rem 0 1.6rem;
   height: 100vh;
 }
 
 @media only screen and (min-width: 992px) {
+  .hero-canvas {
+    height: 100vh;
+    display: block;
+  }
+
   .hero-section {
     background-position: 0;
+    background: none;
   }
 }
 
@@ -335,7 +345,7 @@ a {
   }
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 692px) {
   .hero-heading {
     position: absolute;
     bottom: 0;
