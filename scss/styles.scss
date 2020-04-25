@@ -5,6 +5,8 @@ Apply a natural box layout to all elements, but allowing components to change.
 https://css-tricks.com/box-sizing/ 
 */
 html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
   box-sizing: border-box;
   font-size: 62.5%;
   /* font size 62.5% is equal to 10px (use rem units below) */
@@ -55,6 +57,11 @@ a {
 
 /* Styles and media queries
 ---------------------------------------------------------------------- */
+
+.section {
+  scroll-snap-align: start;
+}
+
 .hero-canvas {
   height: 100vh;
   display: none;
@@ -476,7 +483,7 @@ a {
     position: absolute;
     z-index: -1;
     margin-top: -14rem;
-    margin-left: 3.5rem;
+    margin-left: 2rem;
   }
 
   .coffee-beans {
@@ -490,26 +497,75 @@ a {
   }
 }
 
-.gallery {
-  padding: 5rem 15rem 5rem 15rem;
-  opacity: 50%;
-  background-color: grey;
-  height: 100vh;
-}
+// .gallery {}
 
 @media only screen and (min-width: 992px) {
   .gallery {
-    background-color: grey;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem 15rem 5rem 15rem;
     height: 100vh;
+  }
+
+  .carousel {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+
+
+    &__image {
+      width: 32%;
+      object-fit: cover;
+    }
+
+    &__track {
+      list-style: none;
+      overflow: -moz-scrollbars-none;
+      -ms-overflow-style: none;
+      overflow-y: auto;
+      white-space: nowrap;
+    }
+
+
+    &__track::-webkit-scrollbar {
+      width: 0 !important
+    }
+
+    &__slide {
+      display: inline;
+      position: relative;
+      top: 0;
+      bottom: 0;
+    }
+
+    &__nav {
+      font-family: "Muli";
+      text-align: right;
+      font-size: 2rem;
+    }
+
+    &__current-photo {
+      font-weight: 800;
+    }
+
+    &__button {
+      font-family: "Muli";
+      background-color: transparent;
+      border: none;
+      outline: none;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  &__slider::-webkit-scrollbar {
+    width: 0 !important
   }
 }
 
-@media only screen and (min-width: 1680px) {
-  .gallery {
-    background-color: grey;
-    height: 100vh;
-  }
-}
+@media only screen and (min-width: 1680px) {}
 
 .coffee-container {
   order: 1;
@@ -545,7 +601,7 @@ a {
   &__greeting {
     width: 100%;
     order: 2;
-    margin: 4rem 0 2rem 0;
+    margin: 2rem 0 2rem 0;
   }
 
   &__heading {
@@ -557,6 +613,7 @@ a {
 
   &__paragraph {
     color: #ffffff;
+    height: 3rem;
   }
 
   &__message {
@@ -651,7 +708,6 @@ a {
     &__message {
       display: flex;
       align-items: center;
-      margin-top: 2rem;
     }
 
     &__area {

@@ -22,6 +22,7 @@
     "gulp-sass": "^4.0.2"
   },
   "dependencies": {
+    "fullpage.js": "^3.0.8",
     "pixi.js": "^5.2.1"
   }
 }

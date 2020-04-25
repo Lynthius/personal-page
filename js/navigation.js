@@ -17,7 +17,7 @@ function handleClick() {
 };
 
 // Percent of scrolled window for if statement in the next function
-let percentage = 0;
+var percentage = 0;
 
 function getScrollPercent() {
   const h = document.documentElement,
