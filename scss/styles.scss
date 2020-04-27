@@ -58,8 +58,10 @@ a {
 /* Styles and media queries
 ---------------------------------------------------------------------- */
 
-.section {
-  scroll-snap-align: start;
+@media only screen and (min-width: 992px) {
+  .section {
+    scroll-snap-align: start;
+  }
 }
 
 .hero-canvas {
@@ -248,11 +250,15 @@ a {
       a {
         text-decoration: none;
         color: #000;
+        // background-color: #000;
+        background-image: linear-gradient(to right, transparent 50%, black 50%);
+        background-size: 200%;
+        transition: color .4s, background-position .3s;
       }
 
       a:hover {
         color: #ffffff;
-        background-color: #000;
+        background-position: -100%;
       }
 
       &--dark-mode {
@@ -318,8 +324,18 @@ a {
     transform-origin: left top;
 
     &__item {
-      a:hover {
-        border-bottom: 2px solid #000;
+      a::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: #000;
+        transition: width .1s;
+      }
+
+      a:hover::after {
+        width: 100%;
+        transition: width .3s;
       }
 
       &--dark-mode {
@@ -329,8 +345,19 @@ a {
           color: #ffffff;
         }
 
-        a:hover {
-          border-bottom: 2px solid #ffffff;
+        a::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background: #ffffff;
+          transition: width .1s;
+        }
+
+        a:hover::after {
+          width: 100%;
+          transition: width .3s;
+          // border-bottom: 2px solid #ffffff;
         }
       }
     }
@@ -398,7 +425,7 @@ a {
   &__image {
     max-width: 100%;
     align-self: flex-end;
-    margin: 4rem 0 8rem 0;
+    margin: 4rem 0 0 0;
   }
 }
 
@@ -415,6 +442,8 @@ a {
     &__text {
       max-width: 50%;
       margin: 0 5% 0 0;
+      opacity: 0;
+      transition: .5s .1s ease-in-out;
     }
 
     &__heading {
@@ -472,6 +501,7 @@ a {
   z-index: -1;
   margin-top: -4rem;
   margin-left: 7rem;
+  margin-bottom: -10rem;
 }
 
 .coffee-beans {
@@ -497,50 +527,94 @@ a {
   }
 }
 
-// .gallery {}
+.gallery {
+  display: flex;
+  height: 100vh;
+  // align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding: 11.3rem 2rem 4rem 2rem;
 
-@media only screen and (min-width: 992px) {
-  .gallery {
-    display: flex;
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    padding: 5rem 15rem 5rem 15rem;
-    height: 100vh;
+  &__nav {
+    // display: none;
+    display: unset;
+    font-family: "Muli";
+    text-align: center;
+    font-size: 2rem;
+    // border: 1px solid red;
   }
 
-  .carousel {
-    display: flex;
-    flex-direction: column;
-    width: 100vw;
+  &__current-photo {
+    font-weight: 800;
+  }
 
+  &__button {
+    // display: none;
+    display: inline-block;
+    font-family: "Muli";
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+}
 
-    &__image {
-      width: 32%;
-      object-fit: cover;
-    }
+.carousel {
+  // border: 2px green solid;
+  margin-bottom: 4rem;
+  width: 100%;
+  height: 254px;
 
-    &__track {
-      list-style: none;
-      overflow: -moz-scrollbars-none;
-      -ms-overflow-style: none;
-      overflow-y: auto;
-      white-space: nowrap;
-    }
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
+  &__track {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 25rem;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    white-space: nowrap;
+    list-style: none;
+    scroll-behavior: smooth;
 
-    &__track::-webkit-scrollbar {
+    &::-webkit-scrollbar {
       width: 0 !important
     }
 
-    &__slide {
-      display: inline;
-      position: relative;
-      top: 0;
-      bottom: 0;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
+  }
+
+  &__slide {
+    // border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: -0.4rem;
+
+    &:last-child {
+      margin-right: 0;
     }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .gallery {
+    flex-direction: column;
+    align-items: unset;
+    justify-content: center;
+    padding: 10rem 15rem 5rem 15rem;
+    height: 100vh;
 
     &__nav {
+      display: unset;
       font-family: "Muli";
       text-align: right;
       font-size: 2rem;
@@ -551,6 +625,7 @@ a {
     }
 
     &__button {
+      display: inline-block;
       font-family: "Muli";
       background-color: transparent;
       border: none;
@@ -560,27 +635,72 @@ a {
     }
   }
 
-  &__slider::-webkit-scrollbar {
-    width: 0 !important
+  .carousel {
+    // display: flex;
+    // position: relative;
+    height: 380px;
+    width: 100%;
+    margin: 4rem auto;
+    // border: 1px green solid;
+
+    &__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &__track {
+      height: 100%;
+      width: 100%;
+      // overflow: scroll;
+      overflow-y: hidden;
+      overflow-x: hidden;
+      white-space: nowrap;
+      // border: 1px red solid;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      scroll-behavior: smooth;
+    }
+
+    &__slide {
+      // position: relative;
+      // cursor: pointer;
+      display: inline-block;
+      margin-left: -0.4rem;
+      margin-right: 10px;
+      // border: 1px red solid;
+      width: 50%;
+    }
+
+    &__slide:last-child {
+      margin-right: 50%;
+    }
   }
 }
 
-@media only screen and (min-width: 1680px) {}
+@media only screen and (min-width: 1680px) {
+  .gallery {
+    padding: 5rem 30rem 5rem 30rem;
+  }
+
+  .carousel {
+    // display: flex;
+    // position: relative;
+    height: 480px;
+  }
+}
 
 .coffee-container {
   order: 1;
-  margin: 3rem 0 3rem 0;
+  margin: 0 0 3rem 0;
   position: relative;
-  width: 24rem;
-  height: 24rem;
+  width: 18rem;
+  height: 18rem;
 }
 
 .coffee-canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  clip-path: circle(32% at 50% 45%);
-  width: 24rem;
+  display: none;
 }
 
 .contact {
@@ -678,6 +798,14 @@ a {
     height: 28rem;
   }
 
+  .coffee-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: circle(32% at 50% 45%);
+    width: 24rem;
+  }
+
   .contact {
     display: flex;
     flex-direction: row;
@@ -700,9 +828,16 @@ a {
       order: unset;
     }
 
+    &__paragraph {
+      opacity: 0;
+      transition: .7s ease-in-out;
+    }
+
     &__heading {
       font-size: 7.2rem;
       line-height: 8rem;
+      opacity: 0;
+      transition: .7s ease-in-out;
     }
 
     &__message {
@@ -724,6 +859,7 @@ a {
 @media only screen and (min-width: 1680px) {
 
   .coffee-canvas {
+    display: unset;
     position: absolute;
     top: 0;
     left: 0;
