@@ -148,12 +148,14 @@
         <div class="contact__message">
 
           <form method="POST" data-netlify="true" class="contact__form">
-            <input type="email" name="email" placeholder="e-mail" class="contact__input" required />
-            <br />
+            <div class="contact__inputs">
+              <input type="text" name="name" placeholder="name" class="contact__input" required />
+              <input type="email" name="email" placeholder="e-mail" class="contact__input" required />
+            </div>
             <textarea name="message" placeholder="Type your message here..." cols="20" rows="10" class="contact__area"
               required></textarea>
             <br />
-            <div class="field">
+            <div class="contact__recaptcha">
               <div data-netlify-recaptcha="true"></div>
             </div>
             <button name="submit" type="submit" class="contact__button">

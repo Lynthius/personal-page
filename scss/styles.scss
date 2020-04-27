@@ -769,6 +769,10 @@ a {
     padding: 1.6rem;
   }
 
+  &__recaptcha {
+    height: 70%;
+  }
+
   &__button {
     outline: none;
     border: none;
@@ -845,6 +849,16 @@ a {
       align-items: center;
     }
 
+    &__inputs {
+      display: flex;
+      justify-content: space-between;
+      // border: 1px green solid;
+    }
+
+    &__input {
+      width: 47%;
+    }
+
     &__area {
       width: 38rem;
       height: 16rem;
@@ -869,7 +883,6 @@ a {
 
   .contact {
     padding: 2rem 30rem 5rem 30rem;
-
     &__image {
       top: 0;
       left: 0;

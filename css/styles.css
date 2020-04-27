@@ -563,6 +563,8 @@ a {
     margin-top: 1.6rem;
     margin-bottom: 1.6rem;
     padding: 1.6rem; }
+  .contact__recaptcha {
+    height: 70%; }
   .contact__button {
     outline: none;
     border: none;
@@ -620,6 +622,11 @@ a {
     .contact__message {
       display: flex;
       align-items: center; }
+    .contact__inputs {
+      display: flex;
+      justify-content: space-between; }
+    .contact__input {
+      width: 47%; }
     .contact__area {
       width: 38rem;
       height: 16rem; }
