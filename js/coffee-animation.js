@@ -1,4 +1,4 @@
-const contactSection = document.querySelector(".coffee-container");
+const contactContainer = document.querySelector(".coffee-container");
 const coffeeCanvas = document.querySelector(".coffee-canvas");
 
 let coffeeApp;
@@ -10,7 +10,7 @@ function initPixi() {
         view: coffeeCanvas
     });
 
-    contactSection.appendChild(coffeeApp.view)
+    contactContainer.appendChild(coffeeApp.view)
 
     let coffeImg = new PIXI.Sprite.from("images/coffee-cup.png");
     coffeImg.width = 500;

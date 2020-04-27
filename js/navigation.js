@@ -2,6 +2,7 @@ const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".navigation");
 const navItems = document.querySelectorAll(".navigation__item");
 const socialItems = document.querySelectorAll(".social__item");
+const links = document.querySelectorAll('a');
 
 // Hamburger menu handler and social links in mobile version
 function handleClick() {
@@ -15,6 +16,18 @@ function handleClick() {
     });
   };
 };
+
+function closeMenu() {
+  hamburger.classList.toggle("hamburger--active");
+  hamburger.setAttribute("aria-expanded", hamburger.classList.contains("hamburger--active"));
+  nav.classList.toggle("navigation--active");
+
+  if (window.screen.width < 992) {
+    socialItems.forEach((item) => {
+      item.classList.toggle("social__item--dark-mode-mobile");
+    });
+  };
+}
 
 // Percent of scrolled window for if statement in the next function
 var percentage = 0;
@@ -59,6 +72,9 @@ function changeSocialColors() {
 };
 
 hamburger.addEventListener("click", handleClick);
+
 window.addEventListener("scroll", changeNavColor);
 window.addEventListener("scroll", changeSocialColors);
 window.addEventListener("scroll", getScrollPercent);
+
+links.forEach(link => link.addEventListener('click', closeMenu));
