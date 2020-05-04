@@ -3,6 +3,21 @@ const nav = document.querySelector(".navigation");
 const navItems = document.querySelectorAll(".navigation__item");
 const socialItems = document.querySelectorAll(".social__item");
 const links = document.querySelectorAll('a');
+const aboutText = document.querySelector('.about__text');
+const contactTxt = document.querySelector('.contact__paragraph');
+const contactHead = document.querySelector('.contact__heading');
+
+// Percent of scrolled window for if statement in the next function
+var percentage = 0;
+
+function getScrollPercent() {
+  const h = document.documentElement,
+    b = document.body,
+    st = "scrollTop",
+    sh = "scrollHeight";
+  percentage = Math.round(((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100);
+};
+window.addEventListener("scroll", getScrollPercent);
 
 // Hamburger menu handler and social links in mobile version
 function handleClick() {
@@ -16,6 +31,7 @@ function handleClick() {
     });
   };
 };
+hamburger.addEventListener("click", handleClick);
 
 function closeMenu() {
   hamburger.classList.toggle("hamburger--active");
@@ -28,19 +44,8 @@ function closeMenu() {
     });
   };
 }
+links.forEach(link => link.addEventListener('click', closeMenu));
 
-// Percent of scrolled window for if statement in the next function
-var percentage = 0;
-
-function getScrollPercent() {
-  const h = document.documentElement,
-    b = document.body,
-    st = "scrollTop",
-    sh = "scrollHeight";
-  percentage = Math.round(((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100);
-};
-
-// Change navigation links and social links color
 function changeNavColor() {
   if (percentage >= 87 && window.screen.width >= 992) {
     navItems.forEach((item) => {
@@ -54,6 +59,7 @@ function changeNavColor() {
     });
   };
 };
+window.addEventListener("scroll", changeNavColor);
 
 function changeSocialColors() {
   if (percentage >= 66 && window.screen.width >= 992) {
@@ -70,11 +76,20 @@ function changeSocialColors() {
     });
   };
 };
-
-hamburger.addEventListener("click", handleClick);
-
-window.addEventListener("scroll", changeNavColor);
 window.addEventListener("scroll", changeSocialColors);
-window.addEventListener("scroll", getScrollPercent);
 
-links.forEach(link => link.addEventListener('click', closeMenu));
+function showAboutText() {
+    if (percentage > 10) {
+        aboutText.style.opacity = 1;
+    }
+}
+window.addEventListener("scroll", showAboutText);
+
+function showPargraphText() {
+    if (percentage > 70) {
+        contactTxt.style.opacity = 1;
+        contactHead.style.opacity = 1;
+    }
+}
+window.addEventListener("scroll", showPargraphText);
+

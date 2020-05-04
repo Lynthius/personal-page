@@ -1,12 +1,8 @@
-const gallery = document.querySelector('.gallery');
-// const carouselTrack = document.querySelector('.carousel__track');
 const sliderBtnRight = document.querySelector('.gallery__button--right');
 const sliderBtnLeft = document.querySelector('.gallery__button--left');
 const sliderCounter = document.querySelector('.gallery__current-photo');
 const slider = document.querySelector('.carousel__track');
 const image = document.querySelector('.carousel__slide');
-
-document.querySelector('img').setAttribute('draggable', false);
 
 // Returns a function, that, as long as it continues to be invoked, will not
 // be triggered. The function will be called after it stops being called for
@@ -37,18 +33,15 @@ const nextSlide = debounce(function () {
     sliderCounter.textContent = '0' + i;
     return;
   }
-
   i++;
   slider.scrollLeft += (image.offsetWidth + 10);
   if (i <= 9) {
     sliderCounter.textContent = '0' + i;
   } else if (i > 9 && i < 21) {
     sliderCounter.textContent = i;
-  } else {
-    // i = 1;
-    // sliderCounter.textContent = '0' + i;
   }
 }, 400);
+sliderBtnRight.addEventListener('click', nextSlide);
 
 const previousSlide = debounce(function () {
   if (slider.scrollLeft === 0) {
@@ -65,30 +58,6 @@ const previousSlide = debounce(function () {
     sliderCounter.textContent = '0' + i;
   }
 }, 400)
-
-// --------------------------
-let touchstartX = 0;
-let touchendX = 0;
-
-slider.addEventListener('touchstart', function (e) {
-  touchstartX = e.changedTouches[0].screenX;
-}, false);
-
-slider.addEventListener('touchend', function (e) {
-  touchendX = e.changedTouches[0].screenX;
-  handleSwipe();
-}, false);
-
-function handleSwipe() {
-  if (touchendX > touchstartX) {
-    previousSlide()
-  } else if (touchendX < touchstartX) {
-    nextSlide()
-  }
-}
-// ---------------------------
-
-sliderBtnRight.addEventListener('click', nextSlide);
 sliderBtnLeft.addEventListener('click', previousSlide);
 
 window.addEventListener('keydown', function (e) {
