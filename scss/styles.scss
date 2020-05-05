@@ -413,7 +413,7 @@ a {
   padding: 4rem 2rem 4rem 2rem;
 
   &__heading {
-    font-size: 3.6rem;
+    font-size: 3.4rem;
   }
 
   &__image {
@@ -676,12 +676,12 @@ a {
   &__greeting {
     width: 100%;
     order: 2;
-    margin: 2rem 0 2rem 0;
+    margin-top: 2rem;
   }
 
   &__heading {
     color: #ffffff;
-    font-size: 3.6rem;
+    font-size: 3.3rem;
     line-height: 4rem;
     margin: 0;
   }
@@ -689,11 +689,11 @@ a {
   &__paragraph {
     color: #ffffff;
     height: 3rem;
+    margin-bottom: 0;
   }
 
   &__message {
     order: 3;
-    align-self: stretch;
   }
 
   &__input {
@@ -719,8 +719,6 @@ a {
     background-color: transparent;
     width: 100%;
     height: 16rem;
-    margin-top: 1.6rem;
-    margin-bottom: 1.6rem;
     padding: 1.6rem;
   }
 
@@ -747,7 +745,6 @@ a {
 @media only screen and (min-width: 992px) {
   .coffee-container {
     order: 1;
-    margin: 3rem 0 3rem 0;
     position: relative;
     width: 28rem;
     height: 28rem;
@@ -770,28 +767,23 @@ a {
     font-family: "Muli";
     padding: 0 15rem 5rem 15rem;
     height: 100vh;
-
+    
     &__greeting {
       order: unset;
     }
-
+    
     &__paragraph {
       opacity: 0;
       transition: .7s ease-in-out;
     }
-
+    
     &__heading {
       font-size: 7.2rem;
       line-height: 8rem;
       opacity: 0;
       transition: .7s ease-in-out;
     }
-
-    &__message {
-      display: flex;
-      align-items: center;
-    }
-
+    
     &__inputs {
       display: flex;
     }
@@ -832,10 +824,6 @@ a {
 
     &__image {
       width: 28rem;
-    }
-
-    &__message {
-      align-items: flex-start;
     }
 
     &__area {
@@ -962,6 +950,11 @@ footer {
   }
 }
 
+  .contact__recaptcha {
+    width: 100px;
+    margin: 0;
+}
+
 .success {
   display: flex;
   flex-direction: column;
@@ -1023,4 +1016,9 @@ footer {
   .success {
     padding: 2rem 30rem 5rem 30rem;
   }
+}
+
+.hidden {
+  visibility: hidden;
+  margin: 0;
 }
