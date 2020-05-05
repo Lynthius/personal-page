@@ -7,12 +7,6 @@
   <title>Tomasz Przyborowski</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <script>
-       function onSubmit(token) {
-         document.getElementById("form").submit();
-       }
-     </script>
 </head>
 
 <body>
@@ -168,7 +162,7 @@
             <div class="contact__recaptcha">
               <div data-netlify-recaptcha="true"></div>
             </div>
-            <button name="submit" type="submit" class="contact__button g-recaptcha" data-sitekey="6Lcy3fIUAAAAAHkDvvdXjJSdpKLD17vvx0oZ95yL" data-callback='onSubmit'>send</button>
+            <button name="submit" type="submit" class="contact__button">send</button>
           </form>
         </div>
       </section>
