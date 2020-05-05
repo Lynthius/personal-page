@@ -702,6 +702,50 @@ footer {
     text-align: right;
     padding: 4rem 0 4rem 2rem; } }
 
-@media only screen and (min-width: 992px) and (min-width: 1680px) {
+@media only screen and (min-width: 1680px) {
   footer {
     padding: 5rem 30rem 5rem 30rem; } }
+
+.success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  padding: 4rem 2rem 6rem 2rem;
+  background-color: #000000; }
+  .success__heading {
+    color: #ffffff;
+    font-size: 3.6rem;
+    line-height: 3rem;
+    margin: 0; }
+  .success__paragraph {
+    color: #ffffff; }
+  .success__link {
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: .2rem solid #ffffff; }
+
+@media only screen and (min-width: 992px) {
+  .success {
+    padding: 5rem 15rem 5rem 15rem; }
+    .success__heading {
+      font-size: 7.2rem;
+      line-height: 6rem; }
+    .success__link {
+      border-bottom: none; }
+      .success__link::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: .2rem;
+        background: #ffffff;
+        transition: width .1s; }
+      .success__link:hover::after {
+        width: 100%;
+        transition: width .3s; } }
+
+@media only screen and (min-width: 1680px) {
+  .success {
+    padding: 2rem 30rem 5rem 30rem; } }

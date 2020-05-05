@@ -954,10 +954,73 @@ footer {
     text-align: right;
     padding: 4rem 0 4rem 2rem;
   }
+}
 
-  @media only screen and (min-width: 1680px) {
-    footer {
-      padding: 5rem 30rem 5rem 30rem;
+@media only screen and (min-width: 1680px) {
+  footer {
+    padding: 5rem 30rem 5rem 30rem;
+  }
+}
+
+.success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  padding: 4rem 2rem 6rem 2rem;
+  background-color: #000000;
+
+  &__heading {
+    color: #ffffff;
+    font-size: 3.6rem;
+    line-height: 3rem;
+    margin: 0;
+  }
+
+  &__paragraph {
+    color: #ffffff;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: #ffffff;
+    border-bottom: .2rem solid #ffffff;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .success {
+    padding: 5rem 15rem 5rem 15rem;
+
+    &__heading {
+      font-size: 7.2rem;
+      line-height: 6rem;
     }
+
+    &__link {
+      border-bottom: none;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: .2rem;
+        background: #ffffff;
+        transition: width .1s;
+      }
+
+      &:hover::after {
+        width: 100%;
+        transition: width .3s;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1680px) {
+  .success {
+    padding: 2rem 30rem 5rem 30rem;
   }
 }
