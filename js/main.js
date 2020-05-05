@@ -7,8 +7,6 @@ const aboutText = document.querySelector('.about__text');
 const contactTxt = document.querySelector('.contact__paragraph');
 const contactHead = document.querySelector('.contact__heading');
 
-document.querySelector('html').style.scrollBehavior = '';
-
 // Percent of scrolled window for if statement in the next function
 var percentage = 0;
 
@@ -94,7 +92,3 @@ function showPargraphText() {
   };
 };
 window.addEventListener("scroll", showPargraphText);
-
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-};
