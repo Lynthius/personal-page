@@ -32,21 +32,21 @@ const nextSlide = debounce(function () {
     i = 1;
     sliderCounter.textContent = '0' + i;
     return;
-  }
+  };
   i++;
   slider.scrollLeft += (image.offsetWidth + 10);
   if (i <= 9) {
     sliderCounter.textContent = '0' + i;
   } else if (i > 9 && i < 21) {
     sliderCounter.textContent = i;
-  }
+  };
 }, 400);
 sliderBtnRight.addEventListener('click', nextSlide);
 
 const previousSlide = debounce(function () {
   if (slider.scrollLeft === 0) {
     return;
-  }
+  };
   i--;
   slider.scrollLeft -= (image.offsetWidth + 10);
   if (i <= 9) {
@@ -56,7 +56,7 @@ const previousSlide = debounce(function () {
   } else {
     i = 1;
     sliderCounter.textContent = '0' + i;
-  }
+  };
 }, 400)
 sliderBtnLeft.addEventListener('click', previousSlide);
 
@@ -65,5 +65,5 @@ window.addEventListener('keydown', function (e) {
     nextSlide()
   } else if (e.keyCode === 37) {
     previousSlide();
-  }
+  };
 });

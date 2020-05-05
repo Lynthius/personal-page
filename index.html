@@ -7,6 +7,12 @@
   <title>Tomasz Przyborowski</title>
   <link rel="stylesheet" href="css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <script>
+       function onSubmit(token) {
+         document.getElementById("form").submit();
+       }
+     </script>
 </head>
 
 <body>
@@ -53,7 +59,7 @@
           <h2 class="about__heading">about me</h2>
           <p class="about__paragraph">
             I'm a <span class="highlight">photographer</span> and enthusiast <span class="highlight">web
-              developer</span> from Poznań. I've shot hundreds of photos of products of various types and sizes. When it comes to my other passion — programming — I'm still learning but I've fallen in love with front-end technologies, especially Java Script and React.
+              developer</span> from Poznań. I've shot hundreds of photos of products of various types and sizes. When it comes to my other passion - programming, I'm still learning but I've fallen in love with front-end technologies, especially Java Script and React.
           </p>
         </div>
         <img src="images/tomasz-przyborowski.png" alt="author-portrait-photo" class="about__image" />
@@ -148,7 +154,7 @@
           <img src="images/coffee-cup.png" alt="coffee-cup-photo" class="contact__image" />
         </div>
         <div class="contact__message">
-          <form action="/success" method="POST" data-netlify="true" netlify-honeypot="bot-field"
+          <form action="/success" method="POST" data-netlify="true" data-netlify-recaptcha="true" netlify-honeypot="bot-field"
             class="contact__form" netlify>
             <p style="visibility: hidden">
               <label>Don't fill this out if you're a human:</label><input name="bot-field">
@@ -162,7 +168,7 @@
             <div class="contact__recaptcha">
               <div data-netlify-recaptcha="true"></div>
             </div>
-            <button name="submit" type="submit" class="contact__button">send</button>
+            <button name="submit" type="submit" class="contact__button g-recaptcha" data-sitekey="6Lcy3fIUAAAAAHkDvvdXjJSdpKLD17vvx0oZ95yL" data-callback='onSubmit'>send</button>
           </form>
         </div>
       </section>

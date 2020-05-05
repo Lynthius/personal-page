@@ -30,7 +30,7 @@ heroApp.stage.filters = [displacementHeroFilter];
 window.onmousemove = function (e) {
     displacementHeroFilter.scale.x = (window.innerWidth / 2 - e.clientX) / 65;
     displacementHeroFilter.scale.y = (window.innerHeight / 2 - e.clientY) / 45;
-}
+};
 
 // Coffee canvas animation
 let coffeeApp;
@@ -42,7 +42,7 @@ function initPixi() {
         view: coffeeCanvas
     });
 
-    contactContainer.appendChild(coffeeApp.view)
+    contactContainer.appendChild(coffeeApp.view);
 
     let coffeImg = new PIXI.Sprite.from("images/coffee-cup.png");
     coffeImg.width = 500;
@@ -69,6 +69,6 @@ function animate() {
     displacementSprite.x += 7;
     displacementSprite.y += 5;
     requestAnimationFrame(animate);
-}
+};
 
 initPixi();

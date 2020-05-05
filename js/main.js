@@ -43,7 +43,7 @@ function closeMenu() {
       item.classList.toggle("social__item--dark-mode-mobile");
     });
   };
-}
+};
 links.forEach(link => link.addEventListener('click', closeMenu));
 
 function changeNavColor() {
@@ -79,17 +79,20 @@ function changeSocialColors() {
 window.addEventListener("scroll", changeSocialColors);
 
 function showAboutText() {
-    if (percentage > 10) {
-        aboutText.style.opacity = 1;
-    }
-}
+  if (percentage > 10) {
+    aboutText.style.opacity = 1;
+  };
+};
 window.addEventListener("scroll", showAboutText);
 
 function showPargraphText() {
-    if (percentage > 70) {
-        contactTxt.style.opacity = 1;
-        contactHead.style.opacity = 1;
-    }
-}
+  if (percentage > 70) {
+    contactTxt.style.opacity = 1;
+    contactHead.style.opacity = 1;
+  };
+};
 window.addEventListener("scroll", showPargraphText);
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+};
