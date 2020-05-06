@@ -263,6 +263,14 @@ a {
         a {
           text-decoration: none;
           color: #ffffff;
+          background-image: linear-gradient(to right, transparent 50%, white 50%);
+          background-size: 200%;
+          transition: color .4s, background-position .3s;
+        }
+  
+        a:hover {
+          color: #000;
+          background-position: -100%;
         }
       }
     }
