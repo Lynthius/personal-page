@@ -5,10 +5,9 @@ Apply a natural box layout to all elements, but allowing components to change.
 https://css-tricks.com/box-sizing/ 
 */
 html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
   box-sizing: border-box;
   font-size: 62.5%;
+  scroll-behavior: smooth;
   /* font size 62.5% is equal to 10px (use rem units below) */
 }
 
@@ -57,13 +56,6 @@ a {
 
 /* Styles and media queries
 ---------------------------------------------------------------------- */
-
-@media only screen and (min-width: 992px) {
-  .section {
-    scroll-snap-align: start;
-  }
-}
-
 .hero-canvas {
   height: 100vh;
   display: none;
@@ -267,7 +259,7 @@ a {
           background-size: 200%;
           transition: color .4s, background-position .3s;
         }
-  
+
         a:hover {
           color: #000;
           background-position: -100%;
@@ -775,23 +767,23 @@ a {
     font-family: "Muli";
     padding: 0 15rem 5rem 15rem;
     height: 100vh;
-    
+
     &__greeting {
       order: unset;
     }
-    
+
     &__paragraph {
       opacity: 0;
       transition: .7s ease-in-out;
     }
-    
+
     &__heading {
       font-size: 7.2rem;
       line-height: 8rem;
       opacity: 0;
       transition: .7s ease-in-out;
     }
-    
+
     &__inputs {
       display: flex;
     }
@@ -958,9 +950,9 @@ footer {
   }
 }
 
-  .contact__recaptcha {
-    width: 100px;
-    margin: 0;
+.contact__recaptcha {
+  width: 100px;
+  margin: 0;
 }
 
 .success {

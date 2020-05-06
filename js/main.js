@@ -18,6 +18,7 @@ function getScrollPercent() {
   percentage = Math.round(((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight)) * 100);
 };
 window.addEventListener("scroll", getScrollPercent);
+window.addEventListener("onload", getScrollPercent);
 
 // Hamburger menu handler and social links in mobile version
 function handleClick() {
