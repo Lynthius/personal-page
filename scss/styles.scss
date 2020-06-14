@@ -7,8 +7,10 @@ https://css-tricks.com/box-sizing/
 html {
   box-sizing: border-box;
   font-size: 62.5%;
-  scroll-behavior: smooth;
   /* font size 62.5% is equal to 10px (use rem units below) */
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *,
@@ -50,8 +52,16 @@ a {
 }
 
 .highlight {
-  background-color: #28bf49;
-  padding: 0 0.5rem 0 0.5rem;
+  font-weight: 600;
+  background-image: linear-gradient(to right, transparent 50%, black 50%);
+  background-size: 200%;
+  transition: color .4s, background-position .3s;
+  cursor: pointer;
+}
+
+.highlight:hover {
+  color: #ffffff;
+  background-position: -100%;
 }
 
 /* Styles and media queries
