@@ -7,10 +7,6 @@ const aboutText = document.querySelector('.about__text');
 const contactTxt = document.querySelector('.contact__paragraph');
 const contactHead = document.querySelector('.contact__heading');
 
-window.onbeforeunload = function () {
-  window.scrollTo(0, 0);
-}
-
 // Percent of scrolled window for if statement in the next function
 var percentage = 0;
 
