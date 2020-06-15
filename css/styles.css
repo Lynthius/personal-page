@@ -86,10 +86,9 @@ a {
 
 @media only screen and (min-width: 992px) {
   .hamburger {
-    display: none; } }
-
-.hamburger:focus {
-  outline: none; }
+    display: none; }
+    .hamburger:focus {
+      outline: none; } }
 
 .hamburger__box {
   z-index: 999;
@@ -168,10 +167,10 @@ a {
     transform: translateY(-50%);
     font-size: 3.6rem;
     padding: 0;
-    list-style: none; }
-  .navigation__item {
-    margin-bottom: 3.6rem;
+    list-style: none;
     text-transform: uppercase; }
+  .navigation__item {
+    margin-bottom: 3.6rem; }
     .navigation__item a {
       text-decoration: none;
       color: #ffffff; }
@@ -199,7 +198,8 @@ a {
       padding: 0;
       margin: 0;
       list-style: none;
-      line-height: 2.5rem; }
+      line-height: 2.5rem;
+      text-transform: uppercase; }
     .navigation__item {
       margin-bottom: 0.6rem; }
       .navigation__item a {
@@ -208,20 +208,14 @@ a {
         background-image: linear-gradient(to right, transparent 50%, black 50%);
         background-size: 200%;
         transition: color .4s, background-position .3s; }
-      .navigation__item a:hover {
-        color: #ffffff;
-        background-position: -100%; }
-      .navigation__item--dark-mode {
-        margin-bottom: 0.6rem; }
-        .navigation__item--dark-mode a {
-          text-decoration: none;
+        .navigation__item a:hover {
           color: #ffffff;
-          background-image: linear-gradient(to right, transparent 50%, white 50%);
-          background-size: 200%;
-          transition: color .4s, background-position .3s; }
+          background-position: -100%; }
+      .navigation__item--dark-mode a {
+        color: #ffffff;
+        background-image: linear-gradient(to right, transparent 50%, white 50%); }
         .navigation__item--dark-mode a:hover {
-          color: #000;
-          background-position: -100%; } }
+          color: #000; } }
 
 .sr-only {
   position: absolute;
@@ -243,15 +237,13 @@ a {
     font-size: 1.4rem;
     list-style: none;
     padding: 0 0 0 0;
-    margin: 0; }
+    margin: 0;
+    text-transform: uppercase; }
   .social__item {
     display: inline-block;
-    text-transform: uppercase;
     padding-right: 1rem; }
   .social__item--dark-mode-mobile a {
     color: #ffffff; }
-  .social__link {
-    color: #000; }
 
 @media only screen and (min-width: 992px) {
   .social {
@@ -270,20 +262,10 @@ a {
     .social__item a:hover::after {
       width: 100%;
       transition: width .3s; }
-    .social__item--dark-mode {
-      padding-right: 1rem; }
-      .social__item--dark-mode a {
-        color: #ffffff; }
+    .social__item--dark-mode a {
+      color: #ffffff; }
       .social__item--dark-mode a::after {
-        content: '';
-        display: block;
-        width: 0;
-        height: .2rem;
-        background: #ffffff;
-        transition: width .1s; }
-      .social__item--dark-mode a:hover::after {
-        width: 100%;
-        transition: width .3s; } }
+        background: #ffffff; } }
 
 .hero-heading {
   position: absolute;
@@ -299,7 +281,6 @@ a {
 
 @media only screen and (min-width: 692px) {
   .hero-heading {
-    position: absolute;
     bottom: 0;
     right: 0;
     font-size: 7vw;
@@ -310,9 +291,8 @@ a {
     .hero-heading--bigger {
       font-size: unset; } }
 
-@media (max-width: 812px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .hero-heading {
-    position: absolute;
     bottom: 0;
     right: 0;
     font-size: 7vw;
@@ -392,7 +372,6 @@ a {
 @media only screen and (min-width: 992px) {
   .ornaments {
     position: absolute;
-    z-index: -1;
     margin-top: -14rem;
     margin-left: 2rem; }
   .coffee-beans {
@@ -483,8 +462,8 @@ a {
       margin-left: -0.4rem;
       margin-right: 10px;
       width: 50%; }
-    .carousel__slide:last-child {
-      margin-right: 50%; } }
+      .carousel__slide:last-child {
+        margin-right: 50%; } }
 
 @media only screen and (min-width: 1680px) {
   .gallery {
@@ -640,7 +619,8 @@ footer {
   .collaborate__cv {
     width: 15rem;
     color: #ffffff;
-    margin-top: 2rem; }
+    margin-top: 2rem;
+    text-transform: uppercase; }
     .collaborate__cv::after {
       position: relative;
       content: url("/images/arrow.svg");

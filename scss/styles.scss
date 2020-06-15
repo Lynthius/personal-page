@@ -103,11 +103,11 @@ a {
 @media only screen and (min-width: 992px) {
   .hamburger {
     display: none;
-  }
-}
 
-.hamburger:focus {
-  outline: none;
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 .hamburger__box {
@@ -201,11 +201,11 @@ a {
     font-size: 3.6rem;
     padding: 0;
     list-style: none;
+    text-transform: uppercase;
   }
 
   &__item {
     margin-bottom: 3.6rem;
-    text-transform: uppercase;
 
     a {
       text-decoration: none;
@@ -241,6 +241,7 @@ a {
       margin: 0;
       list-style: none;
       line-height: 2.5rem;
+      text-transform: uppercase;
     }
 
     &__item {
@@ -252,27 +253,21 @@ a {
         background-image: linear-gradient(to right, transparent 50%, black 50%);
         background-size: 200%;
         transition: color .4s, background-position .3s;
-      }
 
-      a:hover {
-        color: #ffffff;
-        background-position: -100%;
+        &:hover {
+          color: #ffffff;
+          background-position: -100%;
+        }
       }
 
       &--dark-mode {
-        margin-bottom: 0.6rem;
-
         a {
-          text-decoration: none;
           color: #ffffff;
           background-image: linear-gradient(to right, transparent 50%, white 50%);
-          background-size: 200%;
-          transition: color .4s, background-position .3s;
-        }
 
-        a:hover {
-          color: #000;
-          background-position: -100%;
+          &:hover {
+            color: #000;
+          }
         }
       }
     }
@@ -302,11 +297,11 @@ a {
     list-style: none;
     padding: 0 0 0 0;
     margin: 0;
+    text-transform: uppercase;
   }
 
   &__item {
     display: inline-block;
-    text-transform: uppercase;
     padding-right: 1rem;
   }
 
@@ -314,10 +309,6 @@ a {
     a {
       color: #ffffff;
     }
-  }
-
-  &__link {
-    color: #000;
   }
 }
 
@@ -345,24 +336,12 @@ a {
       }
 
       &--dark-mode {
-        padding-right: 1rem;
-
         a {
           color: #ffffff;
-        }
 
-        a::after {
-          content: '';
-          display: block;
-          width: 0;
-          height: .2rem;
-          background: #ffffff;
-          transition: width .1s;
-        }
-
-        a:hover::after {
-          width: 100%;
-          transition: width .3s;
+          &::after {
+            background: #ffffff;
+          }
         }
       }
     }
@@ -386,7 +365,6 @@ a {
 
 @media only screen and (min-width: 692px) {
   .hero-heading {
-    position: absolute;
     bottom: 0;
     right: 0;
     font-size: 7vw;
@@ -401,9 +379,8 @@ a {
   }
 }
 
-@media (max-width: 812px) and (orientation: landscape) {
+@media only screen and (max-width: 812px) and (orientation: landscape) {
   .hero-heading {
-    position: absolute;
     bottom: 0;
     right: 0;
     font-size: 7vw;
@@ -514,7 +491,6 @@ a {
 @media only screen and (min-width: 992px) {
   .ornaments {
     position: absolute;
-    z-index: -1;
     margin-top: -14rem;
     margin-left: 2rem;
   }
@@ -639,10 +615,10 @@ a {
       margin-left: -0.4rem;
       margin-right: 10px;
       width: 50%;
-    }
 
-    &__slide:last-child {
-      margin-right: 50%;
+      &:last-child {
+        margin-right: 50%;
+      }
     }
   }
 }
@@ -859,6 +835,7 @@ footer {
     width: 15rem;
     color: #ffffff;
     margin-top: 2rem;
+    text-transform: uppercase;
 
     &::after {
       position: relative;
