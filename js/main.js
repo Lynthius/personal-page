@@ -7,6 +7,10 @@ const aboutText = document.querySelector('.about__text');
 const contactTxt = document.querySelector('.contact__paragraph');
 const contactHead = document.querySelector('.contact__heading');
 
+window.onbeforeunload = function () {
+  window.scrollTo(0, 0);
+}
+
 // Percent of scrolled window for if statement in the next function
 var percentage = 0;
 
@@ -26,11 +30,11 @@ function handleClick() {
   hamburger.setAttribute("aria-expanded", hamburger.classList.contains("hamburger--active"));
   nav.classList.toggle("navigation--active");
 
-  if (window.screen.width < 992) {
-    socialItems.forEach((item) => {
-      item.classList.toggle("social__item--dark-mode-mobile");
-    });
-  };
+  // if (window.screen.width < 992) {
+  socialItems.forEach((item) => {
+    item.classList.toggle("social__item--dark-mode-mobile");
+  });
+  // };
 };
 hamburger.addEventListener("click", handleClick);
 
@@ -50,13 +54,11 @@ links.forEach(link => link.addEventListener('click', closeMenu));
 function changeNavColor() {
   if (percentage >= 87 && window.screen.width >= 992) {
     navItems.forEach((item) => {
-      item.classList.remove("navigation__item");
       item.classList.add("navigation__item--dark-mode");
     });
   } else {
     navItems.forEach((item) => {
       item.classList.remove("navigation__item--dark-mode");
-      item.classList.add("navigation__item");
     });
   };
 };
@@ -65,24 +67,22 @@ window.addEventListener("scroll", changeNavColor);
 function changeSocialColors() {
   if (percentage >= 66 && window.screen.width >= 992) {
     socialItems.forEach((item) => {
-      item.classList.remove("social__item");
       item.classList.add("social__item--dark-mode");
-      item.style.display = "inline-block";
     });
   } else if (percentage <= 66 && window.screen.width >= 992) {
     socialItems.forEach((item) => {
       item.classList.remove("social__item--dark-mode");
-      item.classList.add("social__item");
-      item.style.display = "inline-block";
     });
   };
 };
 window.addEventListener("scroll", changeSocialColors);
 
 function showAboutText() {
-  if (percentage > 10) {
+  if (percentage > 16) {
     aboutText.style.opacity = 1;
-  };
+  } else if (percentage < 16) {
+    aboutText.style.opacity = 0;
+  }
 };
 window.addEventListener("scroll", showAboutText);
 
