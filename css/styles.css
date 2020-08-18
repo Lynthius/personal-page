@@ -151,6 +151,8 @@ a {
     border-bottom: none; } }
 
 .navigation {
+  display: flex;
+  justify-content: space-between;
   height: 100vh;
   width: 100vw;
   opacity: 0;
@@ -160,6 +162,10 @@ a {
   left: 0;
   visibility: hidden;
   transition: ease-in-out 0.5s; }
+  .navigation__lang-switcher {
+    margin-left: 4rem; }
+    .navigation__lang-switcher a {
+      font-weight: 400; }
   .navigation__list {
     position: relative;
     text-align: center;
