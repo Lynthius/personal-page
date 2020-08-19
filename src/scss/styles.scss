@@ -21,32 +21,32 @@ html {
 
 @font-face {
   font-family: 'Muli-extralight';
-  src:  url('../fonts/MULI-EXTRALIGHT.TTF') format('truetype');
+  src:  url('../../assets/fonts/MULI-EXTRALIGHT.TTF') format('truetype');
 }
 
 @font-face {
   font-family: 'Muli-light';
-  src:  url('../fonts/MULI-LIGHT.TTF') format('truetype');
+  src:  url('../../assets/fonts/MULI-LIGHT.TTF') format('truetype');
 }
 
 @font-face {
   font-family: 'Muli-medium';
-  src:  url('../fonts/MULI-MEDIUM.TTF') format('truetype');
+  src:  url('../../assets/fonts/MULI-MEDIUM.TTF') format('truetype');
 }
 
 @font-face {
   font-family: 'Muli-regular';
-  src:  url('../fonts/MULI-REGULAR.TTF') format('truetype');
+  src:  url('../../assets/fonts/MULI-REGULAR.TTF') format('truetype');
 }
 
 @font-face {
   font-family: 'Muli-bold';
-  src:  url('../fonts/MULI-BOLD.TTF') format('truetype');
+  src:  url('../../assets/fonts/MULI-BOLD.TTF') format('truetype');
 }
 
 @font-face {
   font-family: 'Muli-extrabold';
-  src:  url('../fonts/MULI-EXTRABOLD.TTF') format('truetype');
+  src:  url('../../assets/fonts/MULI-EXTRABOLD.TTF') format('truetype');
 }
 
 body {
@@ -104,7 +104,7 @@ a {
 .hero-section {
   display: flex;
   position: relative;
-  background: url(/images/hero-image.png);
+  background: url(/assets/images/hero-image.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 22%;
@@ -878,13 +878,13 @@ footer {
 
     &::after {
       position: relative;
-      content: url("/images/arrow.svg");
+      content: url("/assets/images/arrow.svg");
       margin-left: 1rem;
       top: 0;
     }
 
     &:hover::after {
-      content: url("/images/arrow.svg");
+      content: url("/assets/images/arrow.svg");
       animation-name: arrow;
       animation-duration: 700ms;
       transform-origin: 50% 50%;

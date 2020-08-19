@@ -15,13 +15,13 @@ heroApp.renderer.backgroundColor = 0xFFFFFF;
 
 heroSection.appendChild(heroApp.view);
 
-let heroImg = new PIXI.Sprite.from("images/hero-image.png");
+let heroImg = new PIXI.Sprite.from("assets/images/hero-image.png");
 heroImg.width = 945;
 heroImg.height = 900;
 
 heroApp.stage.addChild(heroImg);
 
-depthHeroMap = new PIXI.Sprite.from("images/hero-image-map.png");
+depthHeroMap = new PIXI.Sprite.from("assets/images/hero-image-map.png");
 heroApp.stage.addChild(depthHeroMap);
 
 displacementHeroFilter = new PIXI.filters.DisplacementFilter(depthHeroMap);
@@ -44,13 +44,13 @@ function initPixi() {
 
     contactContainer.appendChild(coffeeApp.view);
 
-    let coffeImg = new PIXI.Sprite.from("images/coffee-cup.png");
+    let coffeImg = new PIXI.Sprite.from("assets/images/coffee-cup.png");
     coffeImg.width = 500;
     coffeImg.height = 499;
 
     coffeeApp.stage.addChild(coffeImg);
 
-    displacementSprite = new PIXI.Sprite.from("images/clouds2.png");
+    displacementSprite = new PIXI.Sprite.from("assets/images/clouds2.png");
     displacementFilter = new PIXI.filters.DisplacementFilter(displacementSprite);
 
     displacementSprite.texture.baseTexture.wrapMode = PIXI.WRAP_MODES.REPEAT;
