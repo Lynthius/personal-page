@@ -19,40 +19,10 @@ html {
   box-sizing: inherit;
 }
 
-@font-face {
-  font-family: 'Muli-extralight';
-  src:  url('../../assets/fonts/MULI-EXTRALIGHT.TTF') format('truetype');
-}
-
-@font-face {
-  font-family: 'Muli-light';
-  src:  url('../../assets/fonts/MULI-LIGHT.TTF') format('truetype');
-}
-
-@font-face {
-  font-family: 'Muli-medium';
-  src:  url('../../assets/fonts/MULI-MEDIUM.TTF') format('truetype');
-}
-
-@font-face {
-  font-family: 'Muli-regular';
-  src:  url('../../assets/fonts/MULI-REGULAR.TTF') format('truetype');
-}
-
-@font-face {
-  font-family: 'Muli-bold';
-  src:  url('../../assets/fonts/MULI-BOLD.TTF') format('truetype');
-}
-
-@font-face {
-  font-family: 'Muli-extrabold';
-  src:  url('../../assets/fonts/MULI-EXTRABOLD.TTF') format('truetype');
-}
-
 body {
   padding: 0;
   margin: 0;
-  font-family: "Muli-extralight";
+  font-family: "Muli";
   font-weight: 400;
   font-size: 1.6rem;
 }
@@ -64,7 +34,7 @@ img {
 h1,
 h2,
 h3 {
-  font-family: "Muli-bold";
+  font-family: "Muli";
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -75,7 +45,7 @@ p {
 }
 
 a {
-  font-family: "Muli-bold";
+  font-family: "Muli";
   color: #000;
   font-weight: 700;
   text-decoration: none;
@@ -554,18 +524,18 @@ a {
 
   &__nav {
     display: inline-block;
-    font-family: "Muli-regular";
+    font-family: "Muli";
     text-align: center;
     font-size: 2rem;
   }
 
   &__current-photo {
-    font-weight: 800;
+    font-family: "Muli";
   }
 
   &__button {
     display: inline-block;
-    font-family: "Muli-bold";
+    font-family: "Muli";
     background-color: transparent;
     border: none;
     outline: none;
@@ -625,7 +595,7 @@ a {
 
     &__nav {
       display: unset;
-      font-family: "Muli-regular";
+      font-family: "Muli";
       text-align: right;
       font-size: 2rem;
     }
@@ -725,7 +695,7 @@ a {
   &__input {
     font-size: 1.4rem;
     color: #ffffff;
-    font-family: "Muli-regular";
+    font-family: "Muli";
     outline: none;
     border: 2px solid #ffffff;
     background-color: transparent;
@@ -737,7 +707,7 @@ a {
 
   &__area {
     font-size: 1.4rem;
-    font-family: "Muli-regular";
+    font-family: "Muli";
     color: #ffffff;
     outline: none;
     resize: none;
@@ -752,7 +722,7 @@ a {
     outline: none;
     border: none;
     text-transform: uppercase;
-    font-family: "Muli-bold";
+    font-family: "Muli";
     font-weight: 800;
     font-size: 1.4rem;
     background-color: #ffffff;
@@ -790,7 +760,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    font-family: "Muli-regular";
+    font-family: "Muli";
     padding: 0 15rem 5rem 15rem;
     height: 100vh;
 
