@@ -6,7 +6,7 @@ const links = document.querySelectorAll("a");
 const aboutText = document.querySelector(".about__text");
 const contactTxt = document.querySelector(".contact__paragraph");
 const contactHead = document.querySelector(".contact__heading");
-const langSwitch = document.querySelectorAll(".navigation__lang-switcher")
+const langSwitch = document.querySelectorAll(".lang-switcher")
 
 // Percent of scrolled window for if statement in the next function
 var percentage = 0;
@@ -70,13 +70,13 @@ function changeNavColor() {
 window.addEventListener("scroll", changeNavColor);
 
 function changeLangColor() {
-  if (percentage >= 90 && window.screen.width >= 992) {
+  if (percentage >= 89 && window.screen.width >= 992) {
     langSwitch.forEach((item) => {
-      item.classList.add("navigation__lang-switcher--dark-mode");
+      item.classList.add("lang-switcher--dark-mode");
     });
-  } else if (percentage <= 89 && window.screen.width >= 992) {
+  } else if (percentage <= 88 && window.screen.width >= 992) {
     langSwitch.forEach((item) => {
-      item.classList.remove("navigation__lang-switcher--dark-mode");
+      item.classList.remove("lang-switcher--dark-mode");
     });
   }
 }
