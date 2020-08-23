@@ -17,34 +17,10 @@ html {
 *:after {
   box-sizing: inherit; }
 
-@font-face {
-  font-family: 'Muli-extralight';
-  src: url("../fonts/MULI-EXTRALIGHT.TTF") format("truetype"); }
-
-@font-face {
-  font-family: 'Muli-light';
-  src: url("../fonts/MULI-LIGHT.TTF") format("truetype"); }
-
-@font-face {
-  font-family: 'Muli-medium';
-  src: url("../fonts/MULI-MEDIUM.TTF") format("truetype"); }
-
-@font-face {
-  font-family: 'Muli-regular';
-  src: url("../fonts/MULI-REGULAR.TTF") format("truetype"); }
-
-@font-face {
-  font-family: 'Muli-bold';
-  src: url("../fonts/MULI-BOLD.TTF") format("truetype"); }
-
-@font-face {
-  font-family: 'Muli-extrabold';
-  src: url("../fonts/MULI-EXTRABOLD.TTF") format("truetype"); }
-
 body {
   padding: 0;
   margin: 0;
-  font-family: "Muli-extralight";
+  font-family: "Muli";
   font-weight: 400;
   font-size: 1.6rem; }
 
@@ -54,7 +30,7 @@ img {
 h1,
 h2,
 h3 {
-  font-family: "Muli-bold";
+  font-family: "Muli";
   font-weight: 700;
   text-transform: uppercase; }
 
@@ -63,7 +39,7 @@ p {
   letter-spacing: 0.02rem; }
 
 a {
-  font-family: "Muli-bold";
+  font-family: "Muli";
   color: #000;
   font-weight: 700;
   text-decoration: none; }
@@ -83,12 +59,13 @@ a {
 ---------------------------------------------------------------------- */
 .hero-canvas {
   height: 100vh;
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .hero-section {
   display: flex;
   position: relative;
-  background: url(/images/hero-image.png);
+  background: url(/assets/images/hero-image.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 22%;
@@ -97,7 +74,7 @@ a {
 @media only screen and (min-width: 992px) {
   .hero-canvas {
     display: block;
-    margin-top: 20px;
+    opacity: 1;
     margin-left: -24px; }
   .hero-section {
     background-position: 0;
@@ -175,7 +152,24 @@ a {
 @media only screen and (min-width: 992px) {
   .navigation-container {
     background-color: transparent;
-    border-bottom: none; } }
+    border-bottom: none;
+    width: auto; } }
+
+.lang-switcher {
+  padding: 3.6rem 2.6rem 0 0;
+  text-align: right;
+  margin-top: 30px; }
+  .lang-switcher--dark-mode {
+    margin-left: 4rem;
+    color: #ffffff; }
+    .lang-switcher--dark-mode a {
+      color: #ffffff; }
+
+@media only screen and (min-width: 992px) {
+  .lang-switcher {
+    padding: 3.6rem 3.6rem 0 0;
+    margin-left: 4rem;
+    margin-top: 0; } }
 
 .navigation {
   height: 100vh;
@@ -187,8 +181,6 @@ a {
   left: 0;
   visibility: hidden;
   transition: ease-in-out 0.5s; }
-  .navigation__lang-switcher {
-    margin-left: 4rem; }
   .navigation__list {
     position: relative;
     text-align: center;
@@ -210,15 +202,12 @@ a {
 
 @media only screen and (min-width: 992px) {
   .navigation {
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     width: auto;
+    left: 1780px;
     height: auto;
     opacity: 1;
     background-color: transparent;
-    top: 0;
-    right: 0;
     padding: 3.6rem 3.6rem 0 0;
     visibility: visible; }
     .navigation__list {
@@ -420,14 +409,15 @@ a {
   padding: 11.3rem 2rem 4rem 2rem; }
   .gallery__nav {
     display: inline-block;
-    font-family: "Muli-regular";
+    font-family: "Muli";
     text-align: center;
     font-size: 2rem; }
   .gallery__current-photo {
+    font-family: "Muli";
     font-weight: 800; }
   .gallery__button {
     display: inline-block;
-    font-family: "Muli-bold";
+    font-family: "Muli";
     background-color: transparent;
     border: none;
     outline: none;
@@ -472,7 +462,7 @@ a {
     height: 100vh; }
     .gallery__nav {
       display: unset;
-      font-family: "Muli-regular";
+      font-family: "Muli";
       text-align: right;
       font-size: 2rem; }
   .carousel {
@@ -542,7 +532,7 @@ a {
   .contact__input {
     font-size: 1.4rem;
     color: #ffffff;
-    font-family: "Muli-regular";
+    font-family: "Muli";
     outline: none;
     border: 2px solid #ffffff;
     background-color: transparent;
@@ -552,7 +542,7 @@ a {
     padding: 1.6rem; }
   .contact__area {
     font-size: 1.4rem;
-    font-family: "Muli-regular";
+    font-family: "Muli";
     color: #ffffff;
     outline: none;
     resize: none;
@@ -565,7 +555,7 @@ a {
     outline: none;
     border: none;
     text-transform: uppercase;
-    font-family: "Muli-bold";
+    font-family: "Muli";
     font-weight: 800;
     font-size: 1.4rem;
     background-color: #ffffff;
@@ -595,7 +585,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    font-family: "Muli-regular";
+    font-family: "Muli";
     padding: 0 15rem 5rem 15rem;
     height: 100vh; }
     .contact__greeting {
@@ -615,7 +605,6 @@ a {
       .contact__input:last-child {
         margin-right: 0; }
     .contact__area {
-      width: 40rem;
       height: 16rem;
       margin: 3rem 0 3rem 0; }
     .contact__button {
@@ -654,11 +643,11 @@ footer {
     text-transform: uppercase; }
     .collaborate__cv::after {
       position: relative;
-      content: url("/images/arrow.svg");
+      content: url("/assets/images/arrow.svg");
       margin-left: 1rem;
       top: 0; }
     .collaborate__cv:hover::after {
-      content: url("/images/arrow.svg");
+      content: url("/assets/images/arrow.svg");
       animation-name: arrow;
       animation-duration: 700ms;
       transform-origin: 50% 50%;
