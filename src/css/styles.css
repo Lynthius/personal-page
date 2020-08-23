@@ -59,12 +59,13 @@ a {
 ---------------------------------------------------------------------- */
 .hero-canvas {
   height: 100vh;
-  display: none; }
+  display: none;
+  opacity: 0; }
 
 .hero-section {
   display: flex;
   position: relative;
-  background: url(/assets/images/hero-image.png);
+  background: url(assets/images/hero-image.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 22%;
@@ -73,7 +74,7 @@ a {
 @media only screen and (min-width: 992px) {
   .hero-canvas {
     display: block;
-    margin-top: 20px;
+    opacity: 1;
     margin-left: -24px; }
   .hero-section {
     background-position: 0;
@@ -165,6 +166,11 @@ a {
   transition: ease-in-out 0.5s; }
   .navigation__lang-switcher {
     margin-left: 4rem; }
+    .navigation__lang-switcher--dark-mode {
+      margin-left: 4rem;
+      color: #ffffff; }
+      .navigation__lang-switcher--dark-mode a {
+        color: #ffffff; }
   .navigation__list {
     position: relative;
     text-align: center;
@@ -591,7 +597,6 @@ a {
       .contact__input:last-child {
         margin-right: 0; }
     .contact__area {
-      width: 40rem;
       height: 16rem;
       margin: 3rem 0 3rem 0; }
     .contact__button {

@@ -69,12 +69,13 @@ a {
 .hero-canvas {
   height: 100vh;
   display: none;
+  opacity: 0;
 }
 
 .hero-section {
   display: flex;
   position: relative;
-  background: url(/assets/images/hero-image.png);
+  background: url(assets/images/hero-image.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 22%;
@@ -84,7 +85,7 @@ a {
 @media only screen and (min-width: 992px) {
   .hero-canvas {
     display: block;
-    margin-top: 20px;
+    opacity: 1;
     margin-left: -24px;
   }
 
@@ -198,6 +199,15 @@ a {
 
   &__lang-switcher {
     margin-left: 4rem;
+
+    &--dark-mode {
+      margin-left: 4rem;
+      a {
+        color: #ffffff;
+      }
+
+      color: #ffffff;
+    }
   }
 
   &__list {
@@ -793,7 +803,6 @@ a {
     }
 
     &__area {
-      width: 40rem;
       height: 16rem;
       margin: 3rem 0 3rem 0;
     }

@@ -25,6 +25,7 @@
     "fullpage.js": "^3.0.8",
     "gulp-concat": "^2.6.1",
     "gulp-css": "^0.1.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^2.0.0",
     "pixi.js": "^5.2.1"
