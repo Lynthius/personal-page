@@ -65,7 +65,7 @@ a {
 .hero-section {
   display: flex;
   position: relative;
-  background: url(assets/images/hero-image.webp);
+  background: url(/assets/images/hero-image.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 22%;
@@ -152,7 +152,24 @@ a {
 @media only screen and (min-width: 992px) {
   .navigation-container {
     background-color: transparent;
-    border-bottom: none; } }
+    border-bottom: none;
+    width: auto; } }
+
+.lang-switcher {
+  padding: 3.6rem 2.6rem 0 0;
+  text-align: right;
+  margin-top: 30px; }
+  .lang-switcher--dark-mode {
+    margin-left: 4rem;
+    color: #ffffff; }
+    .lang-switcher--dark-mode a {
+      color: #ffffff; }
+
+@media only screen and (min-width: 992px) {
+  .lang-switcher {
+    padding: 3.6rem 3.6rem 0 0;
+    margin-left: 4rem;
+    margin-top: 0; } }
 
 .navigation {
   height: 100vh;
@@ -164,13 +181,6 @@ a {
   left: 0;
   visibility: hidden;
   transition: ease-in-out 0.5s; }
-  .navigation__lang-switcher {
-    margin-left: 4rem; }
-    .navigation__lang-switcher--dark-mode {
-      margin-left: 4rem;
-      color: #ffffff; }
-      .navigation__lang-switcher--dark-mode a {
-        color: #ffffff; }
   .navigation__list {
     position: relative;
     text-align: center;
@@ -192,15 +202,12 @@ a {
 
 @media only screen and (min-width: 992px) {
   .navigation {
-    display: flex;
-    justify-content: space-between;
     position: fixed;
     width: auto;
+    left: 1780px;
     height: auto;
     opacity: 1;
     background-color: transparent;
-    top: 0;
-    right: 0;
     padding: 3.6rem 3.6rem 0 0;
     visibility: visible; }
     .navigation__list {
@@ -406,7 +413,8 @@ a {
     text-align: center;
     font-size: 2rem; }
   .gallery__current-photo {
-    font-family: "Muli"; }
+    font-family: "Muli";
+    font-weight: 800; }
   .gallery__button {
     display: inline-block;
     font-family: "Muli";
