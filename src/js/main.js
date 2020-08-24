@@ -6,7 +6,8 @@ const links = document.querySelectorAll("a");
 const aboutText = document.querySelector(".about__text");
 const contactTxt = document.querySelector(".contact__paragraph");
 const contactHead = document.querySelector(".contact__heading");
-const langSwitch = document.querySelectorAll(".lang-switcher")
+const langSwitchItems = document.querySelectorAll(".lang-switcher")
+const langSwitch = document.querySelector(".lang-switcher")
 
 // Percent of scrolled window for if statement in the next function
 var percentage = 0;
@@ -22,6 +23,15 @@ function getScrollPercent() {
 }
 window.addEventListener("scroll", getScrollPercent);
 window.addEventListener("onload", getScrollPercent);
+
+function hideLangSwitch() {
+  if (percentage > 3 && window.screen.width < 992) {
+    langSwitch.style.opacity = 0;
+  } else {
+    langSwitch.style.opacity = 1;
+  }
+}
+window.addEventListener("scroll", hideLangSwitch);
 
 // Hamburger menu handler and social links in mobile version
 function handleClick() {
@@ -71,11 +81,11 @@ window.addEventListener("scroll", changeNavColor);
 
 function changeLangColor() {
   if (percentage >= 89 && window.screen.width >= 992) {
-    langSwitch.forEach((item) => {
+    langSwitchItems.forEach((item) => {
       item.classList.add("lang-switcher--dark-mode");
     });
   } else if (percentage <= 88 && window.screen.width >= 992) {
-    langSwitch.forEach((item) => {
+    langSwitchItems.forEach((item) => {
       item.classList.remove("lang-switcher--dark-mode");
     });
   }
