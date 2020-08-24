@@ -5,6 +5,8 @@
  * pixi.js is licensed under the MIT License.
  * http://www.opensource.org/licenses/mit-license
  */
+
+if (window.screen.width >= 991) {
 var PIXI = (function (exports) {
 	'use strict';
 
@@ -44953,3 +44955,4 @@ var PIXI = (function (exports) {
 }({}));
 PIXI.useDeprecated();
 //# sourceMappingURL=pixi.js.map
+}

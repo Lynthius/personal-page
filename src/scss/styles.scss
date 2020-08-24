@@ -170,7 +170,6 @@ a {
 }
 
 .navigation-container {
-  z-index: 998;
   position: fixed;
   background-color: #ffffff;
   left: 0;
@@ -213,12 +212,12 @@ a {
 
 .navigation {
   height: 100vh;
-  width: 100vw;
+  width: 10vw;
   opacity: 0;
   background-color: #000;
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   visibility: hidden;
   transition: ease-in-out 0.5s;
 
@@ -711,7 +710,6 @@ a {
   }
 
   &__input {
-    z-index: 999;
     font-size: 1.4rem;
     color: #ffffff;
     font-family: "Muli";
@@ -866,13 +864,13 @@ footer {
 
     &::after {
       position: relative;
-      content: url("/assets/images/arrow.svg");
+      content: url("/dist/assets/images/arrow.svg");
       margin-left: 1rem;
       top: 0;
     }
 
     &:hover::after {
-      content: url("/assets/images/arrow.svg");
+      content: url("/dist/assets/images/arrow.svg");
       animation-name: arrow;
       animation-duration: 700ms;
       transform-origin: 50% 50%;
