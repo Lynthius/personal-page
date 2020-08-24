@@ -14,13 +14,13 @@ if (window.screen.width >= 991) {
 
     contactContainer.appendChild(coffeeApp.view);
 
-    let coffeImg = new PIXI.Sprite.from("../assets/images/coffee-cup.png");
+    let coffeImg = new PIXI.Sprite.from("dist/assets/images/coffee-cup.png");
     coffeImg.width = 500;
     coffeImg.height = 499;
 
     coffeeApp.stage.addChild(coffeImg);
 
-    displacementSprite = new PIXI.Sprite.from("../assets/images/clouds2.png");
+    displacementSprite = new PIXI.Sprite.from("dist/assets/images/clouds2.png");
     displacementFilter = new PIXI.filters.DisplacementFilter(
       displacementSprite
     );

@@ -14,13 +14,13 @@ if (window.screen.width >= 992) {
 
   heroSection.appendChild(heroApp.view);
 
-  let heroImg = new PIXI.Sprite.from("../assets/images/hero-image.png");
+  let heroImg = new PIXI.Sprite.from("dist/assets/images/hero-image.png");
   heroImg.width = 945;
   heroImg.height = 900;
 
   heroApp.stage.addChild(heroImg);
 
-  depthHeroMap = new PIXI.Sprite.from("../assets/images/hero-image-map.png");
+  depthHeroMap = new PIXI.Sprite.from("dist/assets/images/hero-image-map.png");
   heroApp.stage.addChild(depthHeroMap);
 
   displacementHeroFilter = new PIXI.filters.DisplacementFilter(depthHeroMap);

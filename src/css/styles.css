@@ -65,7 +65,7 @@ a {
 .hero-section {
   display: flex;
   position: relative;
-  background: url(/assets/images/hero-image.webp);
+  background: url(assets/images/hero-image.webp);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 0% 22%;

@@ -6,11 +6,10 @@ const uglify = require("gulp-uglify-es").default;
 const minStyle = require("gulp-css");
 
 function style() {
-  console.log("One moment I'm working on it!");
   return gulp
     .src("src/scss/**/*.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("src/css"))
+    .pipe(gulp.dest("dist/css"))
     .pipe(browserSync.stream());
 }
 exports.style = style;
@@ -18,18 +17,18 @@ exports.style = style;
 function watch() {
   browserSync.init({
     server: {
-      baseDir: "src/",
+      baseDir: "./",
     },
   });
   gulp.watch("src/scss/**/*.scss", style);
-  gulp.watch("src/*.html").on("change", browserSync.reload);
+  gulp.watch("./*.html").on("change", browserSync.reload);
   gulp.watch("src/js/**/*.js").on("change", browserSync.reload);
 }
 exports.watch = watch;
 
 function minHtml() {
   console.log("One moment I'm building HTML distribution version!");
-  return gulp.src("src/**/*.html")
+  return gulp.src("./*.html")
   .pipe(minMarkup({ collapseWhitespace: true }))
   .pipe(gulp.dest("dist"));
 }
