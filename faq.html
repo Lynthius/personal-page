@@ -13,6 +13,7 @@
     gtag('js', new Date());
     gtag('config', 'UA-174551627-1');
   </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="I'm a photographer and enthusiast web developer from Poznań">
@@ -24,6 +25,7 @@
 
 <body>
   <div class="section">
+    <header>
       <div class="navigation-container">
         <nav>
           <button class="hamburger" aria-expanded="false">
@@ -63,18 +65,16 @@
   <div class="section" id="about">
     <section class="about">
       <div class="about__text">
-        <h2 class="about__heading">about me</h2>
-        <p class="about__paragraph">I'm a <a href="https://www.instagram.com/tomasz_przyborowski/" target="_blank"><span
-              class="highlight">photographer</span></a> and
-          enthusiast <a href="https://github.com/Lynthius" target="_blank"><span class="highlight">web
-              developer</span></a> from Poznań. I've shot hundreds of photos of products of various types and sizes.
-          When it comes
-          to my other passion - programming, I'm still learning but I've fallen in love with front-end technologies,
-          especially Java Script and React.
-        </p>
+        <h1 class="about__heading">FAQ</h1>
+        <div class="accordion__faq">
+          <div class="accordion__item" id="question1">
+            <a href="question1">
+              Hello my friend! This is example of question.
+            </a>
+            <div class="answer">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis, expedita.</div>
+          </div>
+        </div>
       </div>
-      <img src="dist/assets/images/tomasz-przyborowski.webp" alt="author-portrait-photo" class="about__image"
-        loading="lazy" />
     </section>
     <div class="ornaments">
       <img src="dist/assets/images/coffee-beans.webp" alt="coffee-beans-photo" class="coffee-beans" />
