@@ -1,4 +1,3 @@
-if (window.screen.width >= 991) {
   const contactContainer = document.querySelector(".coffee-container");
   const coffeeCanvas = document.querySelector(".coffee-canvas");
 
@@ -14,13 +13,13 @@ if (window.screen.width >= 991) {
 
     contactContainer.appendChild(coffeeApp.view);
 
-    let coffeImg = new PIXI.Sprite.from("dist/assets/images/coffee-cup.png");
+    let coffeImg = new PIXI.Sprite.from("dist/assets/images/coffee-cup.webp");
     coffeImg.width = 500;
     coffeImg.height = 499;
 
     coffeeApp.stage.addChild(coffeImg);
 
-    displacementSprite = new PIXI.Sprite.from("dist/assets/images/clouds2.png");
+    displacementSprite = new PIXI.Sprite.from("dist/assets/images/clouds2.webp");
     displacementFilter = new PIXI.filters.DisplacementFilter(
       displacementSprite
     );
@@ -44,4 +43,3 @@ if (window.screen.width >= 991) {
   }
 
   initPixi();
-}

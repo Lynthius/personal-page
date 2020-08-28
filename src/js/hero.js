@@ -1,4 +1,3 @@
-if (window.screen.width >= 992) {
   const heroSection = document.querySelector(".hero-section");
   const heroCanvas = document.querySelector(".hero-canvas");
 
@@ -14,13 +13,13 @@ if (window.screen.width >= 992) {
 
   heroSection.appendChild(heroApp.view);
 
-  let heroImg = new PIXI.Sprite.from("dist/assets/images/hero-image.png");
+  let heroImg = new PIXI.Sprite.from("dist/assets/images/hero-image.webp");
   heroImg.width = 945;
   heroImg.height = 900;
 
   heroApp.stage.addChild(heroImg);
 
-  depthHeroMap = new PIXI.Sprite.from("dist/assets/images/hero-image-map.png");
+  depthHeroMap = new PIXI.Sprite.from("dist/assets/images/hero-image-map.webp");
   heroApp.stage.addChild(depthHeroMap);
 
   displacementHeroFilter = new PIXI.filters.DisplacementFilter(depthHeroMap);
@@ -30,4 +29,3 @@ if (window.screen.width >= 992) {
     displacementHeroFilter.scale.x = (window.innerWidth / 2 - e.clientX) / 65;
     displacementHeroFilter.scale.y = (window.innerHeight / 2 - e.clientY) / 45;
   };
-}
