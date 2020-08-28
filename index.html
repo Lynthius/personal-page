@@ -40,7 +40,7 @@
           </div>
           <div class="navigation">
             <ul class="navigation__list">
-              <li class="navigation__item"><a href="#">FAQ</a></li>
+              <li class="navigation__item"><a href="faq.html">FAQ</a></li>
               <li class="navigation__item"><a href="#about">About</a></li>
               <li class="navigation__item"><a href="#gallery">Gallery</a></li>
               <li class="navigation__item"><a href="#contact">Contact</a></li>
@@ -232,12 +232,20 @@
     </footer>
   </div>
 
-  <script src="dist/js/pixi.js"></script>
+  <script>
+    if (screen && screen.width >= 991) {
+      document.write('<script src="dist/js/pixi.js"><\/script>');
+    }
+  </script>
   <script src="dist/js/hero.js"></script>
   <script src="dist/js/main.js"></script>
   <script src="dist/js/gallery.js"></script>
+  <script>
+    if (screen && screen.width >= 991) {
+      documet.write('<script src="dist/js/coffee.js"><\/script>')
+    }
+  </script>
   <script src="dist/js/coffee.js"></script>
-
 </body>
 
 </html>

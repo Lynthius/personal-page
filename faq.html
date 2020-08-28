@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-174551627-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'UA-174551627-1');
+  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="I'm a photographer and enthusiast web developer from Poznań">
+  <title>FAQ - photography and web development</title>
+  <link href="dist/css/styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@200;300;600;700;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png" />
+</head>
+
+<body>
+  <div class="section">
+      <div class="navigation-container">
+        <nav>
+          <button class="hamburger" aria-expanded="false">
+            <span class="sr-only">Open / close</span>
+            <span class="hamburger__box">
+              <span class="hamburger__inner"></span>
+            </span>
+          </button>
+          <div class="lang-switcher">
+            <a href="/language/switch/pl" lang="pl" hreflang="pl">PL / </a>
+            <a href="/language/switch/en" lang="en" hreflang="en">EN</a>
+          </div>
+          <div class="navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a href="index.html">Home</a></li>
+              <li class="navigation__item"><a href="index.html#about">About</a></li>
+              <li class="navigation__item"><a href="index.html#gallery">Gallery</a></li>
+              <li class="navigation__item"><a href="index.html#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <aside class="social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a href="https://github.com/Lynthius" target="_blank" class="social__link">github</a>
+            </li>
+            <li class="social__item">
+              <a href="https://www.instagram.com/tomasz_przyborowski/" target="_blank"
+                class="social__link">instagram</a>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </header>
+  </div>
+
+  <div class="section" id="about">
+    <section class="about">
+      <div class="about__text">
+        <h2 class="about__heading">about me</h2>
+        <p class="about__paragraph">I'm a <a href="https://www.instagram.com/tomasz_przyborowski/" target="_blank"><span
+              class="highlight">photographer</span></a> and
+          enthusiast <a href="https://github.com/Lynthius" target="_blank"><span class="highlight">web
+              developer</span></a> from Poznań. I've shot hundreds of photos of products of various types and sizes.
+          When it comes
+          to my other passion - programming, I'm still learning but I've fallen in love with front-end technologies,
+          especially Java Script and React.
+        </p>
+      </div>
+      <img src="dist/assets/images/tomasz-przyborowski.webp" alt="author-portrait-photo" class="about__image"
+        loading="lazy" />
+    </section>
+    <div class="ornaments">
+      <img src="dist/assets/images/coffee-beans.webp" alt="coffee-beans-photo" class="coffee-beans" />
+    </div>
+  </div>
+
+  <div class="section" id="footer">
+    <footer>
+      <section class="collaborate">
+        <h3 class="collaborate__heading">let’s collaborate</h3>
+        <p class="collaborate__paragraph">If you are interested in hiring me, just download my cv below, check my
+          skills and then send me a message!</p>
+        <a href="dist/assets/pdf/Tomasz Przyborowski CV.pdf" class="collaborate__cv" target="_blank"
+          alt="curriculum-vitae">download cv</a>
+      </section>
+      <section>
+        <div class="social-footer">
+          <a href="https://github.com/Lynthius" target="_blank"><img src="dist/assets/images/GIT.svg" alt="github-icon"
+              class="social-footer__icon" /></a>
+          <a href="https://www.instagram.com/tomasz_przyborowski/" target="_blank"><img
+              src="dist/assets/images/INSTA.svg" alt="insta-icon" class="social-footer__icon" /></a>
+        </div>
+        <div class="copyright">
+          <p class="copyright__paragraph">Tomasz Przyborowski © 2020</p>
+        </div>
+      </section>
+    </footer>
+  </div>
+
+  <script src="dist/js/main.js"></script>
+
+</body>
+
+</html>
