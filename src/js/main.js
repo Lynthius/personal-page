@@ -7,7 +7,7 @@ const aboutText = document.querySelector(".about__text");
 const contactTxt = document.querySelector(".contact__paragraph");
 const contactHead = document.querySelector(".contact__heading");
 const langSwitchItems = document.querySelectorAll(".lang-switcher")
-const langSwitch = document.querySelector(".lang-switcher")
+const langSwitch = document.querySelector(".lang-switcher");
 
 // Percent of scrolled window for if statement in the next function
 var percentage = 0;
