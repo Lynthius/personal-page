@@ -22,7 +22,7 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: "Muli";
+  font-family: "Muli", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
 }
@@ -34,7 +34,7 @@ img {
 h1,
 h2,
 h3 {
-  font-family: "Muli";
+  font-family: "Muli", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -45,7 +45,7 @@ p {
 }
 
 a {
-  font-family: "Muli";
+  font-family: "Muli", sans-serif;
   color: #000;
   font-weight: 700;
   text-decoration: none;
@@ -522,6 +522,12 @@ a {
     margin-left: 2rem;
   }
 
+  .ornaments-faq {
+    z-index: -1;
+    margin-top: 14rem;
+    margin-left: 7rem;
+  }
+
   .coffee-beans {
     width: 28rem;
   }
@@ -542,19 +548,19 @@ a {
 
   &__nav {
     display: inline-block;
-    font-family: "Muli";
+    font-family: "Muli", sans-serif;
     text-align: center;
     font-size: 2rem;
   }
 
   &__current-photo {
-    font-family: "Muli";
+    font-family: "Muli", sans-serif;
     font-weight: 800;
   }
 
   &__button {
     display: inline-block;
-    font-family: "Muli";
+    font-family: "Muli", sans-serif;
     background-color: transparent;
     border: none;
     outline: none;
@@ -614,7 +620,7 @@ a {
 
     &__nav {
       display: unset;
-      font-family: "Muli";
+      font-family: "Muli", sans-serif;
       text-align: right;
       font-size: 2rem;
     }
@@ -714,7 +720,7 @@ a {
   &__input {
     font-size: 1.4rem;
     color: #ffffff;
-    font-family: "Muli";
+    font-family: "Muli", sans-serif;
     outline: none;
     border: 2px solid #ffffff;
     background-color: transparent;
@@ -726,7 +732,7 @@ a {
 
   &__area {
     font-size: 1.4rem;
-    font-family: "Muli";
+    font-family: "Muli", sans-serif;
     color: #ffffff;
     outline: none;
     resize: none;
@@ -741,7 +747,7 @@ a {
     outline: none;
     border: none;
     text-transform: uppercase;
-    font-family: "Muli";
+    font-family: "Muli", sans-serif;
     font-weight: 800;
     font-size: 1.4rem;
     background-color: #ffffff;
@@ -779,7 +785,7 @@ a {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    font-family: "Muli";
+    font-family: "Muli", sans-serif;
     padding: 0 15rem 5rem 15rem;
     height: 100vh;
 
@@ -1051,7 +1057,7 @@ footer {
 @media only screen and (min-width: 992px) {
   .faq {
     max-width: 100%;
-    padding: 5rem 15rem 5rem 15rem;
+    padding: 8rem 15rem 5rem 15rem;
 
     &__heading {
       font-size: 7.2rem;
@@ -1078,7 +1084,6 @@ footer {
 .faq__photography {
   display: flex;
   flex-direction: column;
-  align-items: center;
   margin-bottom: 4rem;
 }
 
@@ -1086,7 +1091,6 @@ footer {
   .faq__photography {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
     margin-bottom: 4rem;
   }
 }
@@ -1094,7 +1098,7 @@ footer {
 .faq__webdev {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  // align-items: center;
   margin-top: 4rem;
 }
 
@@ -1102,8 +1106,9 @@ footer {
   .faq__webdev {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    // align-items: center;
     margin-top: 4rem;
+    // padding-bottom: 18rem;
   }
 }
 
@@ -1120,6 +1125,7 @@ footer {
 .section-description-right {
   order: 1;
   font-size: 2.2rem;
+  line-height: 0;
   flex: 1;
   text-align: center;
 }
@@ -1127,17 +1133,18 @@ footer {
 @media only screen and (min-width: 992px) {
 
   .section-description-right {
-    order: 1;
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     flex: 1;
     text-align: right;
+    padding-top: 14rem;
   }
 }
 
 
 .section-description-left {
-  order: 1;
+  // order: 1;
   font-size: 2.2rem;
+  line-height: 0;
   flex: 1;
   text-align: center;
 }
@@ -1145,9 +1152,10 @@ footer {
 @media only screen and (min-width: 992px) {
 
   .section-description-left {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     flex: 1;
     text-align: left;
+    padding-top: 14rem;
   }
 }
 
@@ -1169,7 +1177,7 @@ footer {
   text-align: left;
   justify-content: space-between;
   color: #ffffff;
-  font-family: "Muli";
+  font-family: "Muli", sans-serif;
   font-weight: 700;
   background-color: #000;
   border: none;
