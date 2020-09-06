@@ -763,8 +763,7 @@ footer {
 .faq {
   padding: 4rem 2rem 4rem 2rem;
   justify-content: space-between;
-  align-items: center;
-  max-width: 100%; }
+  align-items: center; }
   .faq__heading {
     font-size: 3.4rem; }
 
@@ -787,40 +786,82 @@ footer {
 
 .faq__photography {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 4rem; }
 
+@media only screen and (min-width: 992px) {
+  .faq__photography {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-bottom: 4rem; } }
+
 .faq__webdev {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: column;
   align-items: center;
   margin-top: 4rem; }
 
-.accordion__faq {
-  flex: 1; }
+@media only screen and (min-width: 992px) {
+  .faq__webdev {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4rem; } }
+
+.faq__photography .accordion__faq {
+  flex: 1;
+  order: 2; }
+
+.faq__webdev .accordion__faq {
+  flex: 1;
+  order: 2; }
 
 .section-description-right {
-  font-size: 3.2rem;
+  order: 1;
+  font-size: 2.2rem;
   flex: 1;
-  text-align: right; }
+  text-align: center; }
+
+@media only screen and (min-width: 992px) {
+  .section-description-right {
+    order: 1;
+    font-size: 3.2rem;
+    flex: 1;
+    text-align: right; } }
 
 .section-description-left {
-  font-size: 3.2rem;
+  order: 1;
+  font-size: 2.2rem;
   flex: 1;
-  text-align: left; }
+  text-align: center; }
+
+@media only screen and (min-width: 992px) {
+  .section-description-left {
+    font-size: 3.2rem;
+    flex: 1;
+    text-align: left; } }
 
 .accordion__item {
-  padding: .5rem 0; }
+  width: 100%; }
+
+@media only screen and (min-width: 992px) {
+  .accordion__item {
+    padding: .5rem 0; } }
 
 .accordion__link {
   display: flex;
   align-items: center;
+  text-align: left;
   justify-content: space-between;
   color: #ffffff;
   font-family: "Muli";
   font-weight: 700;
   background-color: #000;
   border: none;
+  border-radius: 0;
+  outline: none;
   padding: 2rem;
   width: 100%;
   cursor: pointer; }
