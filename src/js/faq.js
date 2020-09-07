@@ -155,9 +155,10 @@ function revealContent(e) {
   faqAnsws.forEach((answer) => {
     answer.style.maxHeight = "0";
     if (answer.id == itemId && btn.getAttribute("aria-expanded") === "true") {
-      answer.style.maxHeight = "24rem";
+      answer.style.maxHeight = "42rem";
       add.style.display = "none";
       remove.style.display = "block";
+      answer.scrollIntoView({ behavior: "smooth", block: "center" });
     }
   });
 }
