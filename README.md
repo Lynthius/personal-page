@@ -15,6 +15,7 @@ Project is created with:
 * HTML5
 * SCSS
 * JavaScript ES2019
+* i18next
 * WebGl
 * Netlify
 
