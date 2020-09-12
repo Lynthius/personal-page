@@ -1,11 +1,16 @@
 i18next.init(
   {
-    lng: "pl",
+    lng: "en",
     debug: true,
     resources: {
+      en: {
+        translation: {
+          key: "hello world",
+        },
+      },
       pl: {
         translation: {
-          key: "hello welt",
+          key: "witaj świecie",
         },
       },
     },
