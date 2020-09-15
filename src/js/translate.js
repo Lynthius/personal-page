@@ -1,5 +1,5 @@
-const langpl = document.querySelector(".langpl")
-const langen = document.querySelector(".langen")
+const langpl = document.querySelector(".lang-switcher__btn--pl")
+const langen = document.querySelector(".lang-switcher__btn--en")
 
 function test () {
   i18next.init({
@@ -33,7 +33,7 @@ function test () {
   })
 
 function updateContent() {
-  document.querySelector(".copyright__paragraph").innerHTML = i18next.t("key");
+  // document.querySelector(".copyright__paragraph").innerHTML = i18next.t("key");
 }
 
 function changeLng(lng) {
@@ -46,4 +46,4 @@ i18next.on("languageChanged", () => {
 });
 
 langpl.addEventListener("click", test)
-langen.addEventListener("click", test2)
+// langen.addEventListener("click", test2)

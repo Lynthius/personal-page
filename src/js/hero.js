@@ -1,4 +1,4 @@
-  const heroSection = document.querySelector(".hero-section");
+  const heroSection = document.querySelector(".hero-header");
   const heroCanvas = document.querySelector(".hero-canvas");
 
   // Hero canvas animation

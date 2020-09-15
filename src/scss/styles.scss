@@ -41,7 +41,7 @@ h3 {
 
 p {
   line-height: 3rem;
-  letter-spacing: 0.02rem;
+  letter-spacing: .02rem;
 }
 
 a {
@@ -64,7 +64,7 @@ a {
   background-position: -100%;
 }
 
-/* Styles and media queries
+/* General styles and media queries
 ---------------------------------------------------------------------- */
 .hero-canvas {
   height: 100vh;
@@ -72,7 +72,7 @@ a {
   opacity: 0;
 }
 
-.hero-section {
+.hero-header {
   display: flex;
   position: relative;
   background: url(/dist/assets/images/hero-image.webp);
@@ -89,7 +89,7 @@ a {
     margin-left: -24px;
   }
 
-  .hero-section {
+  .hero-header {
     background-position: 0;
     background: none;
   }
@@ -188,9 +188,10 @@ a {
 }
 
 .lang-switcher {
-  padding: 3.6rem 2.6rem 0 0;
-  text-align: right;
-  margin-top: 30px;
+  position: fixed;
+  top: 50px;
+  left: 280px;
+  padding: 3.6rem 2.5rem 0 0;
 
   button {
     font-family: "Muli", sans-serif;
@@ -200,14 +201,16 @@ a {
     outline: none;
     background-color: transparent;
     border: none;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
+    letter-spacing: .02rem;
     padding: 0;
+    cursor: pointer;
   }
 
   &--dark-mode {
     margin-left: 4rem;
 
-    a {
+    button {
       color: #ffffff;
     }
 
@@ -218,8 +221,9 @@ a {
 @media only screen and (min-width: 992px) {
   .lang-switcher {
     padding: 3.6rem 3.6rem 0 0;
+    top: 0;
+    left: 0;
     margin-left: 4rem;
-    margin-top: 0;
   }
 }
 
@@ -387,7 +391,7 @@ a {
   }
 }
 
-.hero-heading {
+.hero-header__heading {
   position: absolute;
   left: 2rem;
   right: 2rem;
@@ -403,7 +407,7 @@ a {
 }
 
 @media only screen and (min-width: 692px) {
-  .hero-heading {
+  .hero-header__heading {
     bottom: 0;
     right: 0;
     font-size: 7vw;
@@ -419,7 +423,7 @@ a {
 }
 
 @media only screen and (max-width: 812px) and (orientation: landscape) {
-  .hero-heading {
+  .hero-header__heading {
     bottom: 0;
     right: 0;
     font-size: 7vw;
@@ -434,14 +438,20 @@ a {
   }
 }
 
+.header {
+  font-size: 3.4rem;
+}
+
+@media only screen and (min-width: 992px) {
+  .header {
+    font-size: 7.2rem;
+  }
+}
+
 .about {
   display: flex;
   flex-direction: column-reverse;
   padding: 4rem 2rem 4rem 2rem;
-
-  &__heading {
-    font-size: 3.4rem;
-  }
 
   &__image {
     max-width: 100%;
@@ -459,7 +469,7 @@ a {
     max-width: 100%;
     padding: 5rem 15rem 5rem 15rem;
 
-    &__text {
+    &__description {
       max-width: 50%;
       margin: 0 5% 0 0;
       opacity: 0;
@@ -467,7 +477,6 @@ a {
     }
 
     &__heading {
-      font-size: 7.2rem;
       line-height: 6rem;
       margin-top: 0;
     }
@@ -505,7 +514,7 @@ a {
       padding: 0;
     }
 
-    &__text {
+    &__description {
       max-width: 60%;
     }
 
@@ -1054,10 +1063,6 @@ footer {
   padding: 4rem 2rem 4rem 2rem;
   justify-content: space-between;
   align-items: center;
-
-  &__heading {
-    font-size: 3.4rem;
-  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -1066,7 +1071,6 @@ footer {
     padding: 8rem 15rem 5rem 15rem;
 
     &__heading {
-      font-size: 7.2rem;
       line-height: 6rem;
     }
   }
