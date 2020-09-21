@@ -29,6 +29,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-uglify-es": "^2.0.0",
     "i18next": "^19.7.0",
+    "i18next-localstorage-backend": "^3.1.1",
     "pixi.js": "^5.2.1"
   }
 }

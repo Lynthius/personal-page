@@ -241,9 +241,6 @@ a {
         background-image: linear-gradient(to right, transparent 50%, black 50%);
         background-size: 200%;
         transition: color .4s, background-position .3s; }
-        .navigation__item a:hover {
-          color: #ffffff;
-          background-position: -100%; }
       .navigation__item--dark-mode a {
         color: #ffffff;
         background-image: linear-gradient(to right, transparent 50%, white 50%); }
