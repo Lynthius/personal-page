@@ -15,9 +15,8 @@ const collabCv = document.querySelector(".collaborate__cv");
 const namePlaceholder = document.querySelector(".contact__input");
 const messagePlaceholder = document.querySelector(".contact__area");
 
-// TRANSLATIONS --------------------------------- //
 i18next.init({
-  // lng: "en",
+  lng: "en",
   debug: true,
   resources: {
     en: {
@@ -32,7 +31,8 @@ i18next.init({
         contactSection: "Start by sending a message.",
         contactBtn: "send",
         collabHeader: "let’s collaborate",
-        collabParagraph: "If you are interested in hiring me, just download my cv below, check my skills and then send me a message!",
+        collabParagraph:
+          "If you are interested in hiring me, just download my cv below, check my skills and then send me a message!",
         collabCv: "download cv",
         namePlaceholder: "Name",
         messagePlaceholder: "Type your message here...",
@@ -50,7 +50,8 @@ i18next.init({
         contactSection: "Wyślij do mnie wiadomość.",
         contactBtn: "wyślij",
         collabHeader: "zacznijmy współpracę",
-        collabParagraph: "Jeśli jesteś zainteresowany współpracą, pobierz poniższe cv, sprawdź moje umiejętności i wyślij mi wiadomość!",
+        collabParagraph:
+          "Jeśli jesteś zainteresowany współpracą, pobierz poniższe cv, sprawdź moje umiejętności i wyślij mi wiadomość!",
         collabCv: "pobierz cv",
         namePlaceholder: "Imię",
         messagePlaceholder: "Tu wpisz swoją wiadomość...",
@@ -61,7 +62,6 @@ i18next.init({
     updateContent();
   },
 });
-// ----------------------------------------------- //
 
 function updateContent() {
   faq.innerHTML = i18next.t("faq");
@@ -82,10 +82,12 @@ function updateContent() {
 
 function switchToPl() {
   i18next.changeLanguage("pl");
+  window.localStorage.setItem("lang", window.i18next.language);
 }
 
 function switchToEn() {
   i18next.changeLanguage("en");
+  window.localStorage.setItem("lang", window.i18next.language);
 }
 
 i18next.on("languageChanged", () => {
@@ -94,3 +96,7 @@ i18next.on("languageChanged", () => {
 
 langpl.addEventListener("click", switchToPl);
 langen.addEventListener("click", switchToEn);
+
+window.onload = function () {
+  i18next.changeLanguage(window.localStorage.lang);
+};

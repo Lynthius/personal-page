@@ -35,18 +35,26 @@
             </span>
           </button>
           <div class="lang-switcher">
-            <button lang="en" hreflang="en">EN /</button>
-            <button lang="pl" hreflang="pl" >PL</button>
+            <button class="lang-switcher__btn--en" lang="en" hreflang="en">EN</button> /
+            <button class="lang-switcher__btn--pl" lang="pl" hreflang="pl">PL</button>
           </div>
-          <div class="navigation">
-            <ul class="navigation__list">
-              <li class="navigation__item"><a href="/">Home</a></li>
-              <li class="navigation__item"><a href="index.html#about">About</a></li>
-              <li class="navigation__item"><a href="index.html#gallery">Gallery</a></li>
-              <li class="navigation__item"><a href="index.html#contact">Contact</a></li>
-            </ul>
-          </div>
-        </nav>
+          <div class="navigation-container">
+            <nav>
+              <button class="hamburger" aria-expanded="false">
+                <span class="sr-only">Open / close</span>
+                <span class="hamburger__box">
+                  <span class="hamburger__inner"></span>
+                </span>
+              </button>
+              <div class="navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__item"><a class="highlight" href="/">Home</a></li>
+                  <li class="navigation__item"><a class="highlight translate__about" href="/#about">About</a></li>
+                  <li class="navigation__item"><a class="highlight translate__gallery" href="/#gallery">Gallery</a></li>
+                  <li class="navigation__item"><a class="highlight translate__contact" href="/#contact">Contact</a></li>
+                </ul>
+              </div>
+            </nav>
         <aside class="social">
           <ul class="social__list">
             <li class="social__item">
@@ -254,6 +262,8 @@
 
   <!-- <script src="dist/js/main.js"></script> -->
   <script src="src/js/faq.js"></script>
+  <script src="src/js/i18next.js"></script>
+  <script src="src/js/faq-translate.js"></script>
 
 </body>
 
