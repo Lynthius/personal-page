@@ -896,3 +896,15 @@ footer {
   position: relative;
   transition: max-height 400ms ease-out;
   text-align: justify; }
+
+.translate__question1,
+.translate__question2,
+.translate__question3,
+.translate__question4,
+.translate__question5,
+.translate__question6,
+.translate__question7,
+.translate__question8,
+.add,
+.remove {
+  pointer-events: none; }

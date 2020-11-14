@@ -164,3 +164,4 @@ function revealContent(e) {
 }
 
 faqBtns.forEach((btn) => btn.addEventListener("click", revealContent));
+// document.addEventListener("click", revealContent);
