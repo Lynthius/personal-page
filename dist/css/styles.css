@@ -830,6 +830,11 @@ footer {
   line-height: 0;
   flex: 1;
   text-align: center; }
+  .section-description-right_subtitle::before {
+    position: relative;
+    content: url("/dist/assets/images/left-arrow-black.svg");
+    margin-right: 1rem;
+    top: 0; }
 
 @media only screen and (min-width: 992px) {
   .section-description-right {
@@ -843,6 +848,11 @@ footer {
   line-height: 0;
   flex: 1;
   text-align: center; }
+  .section-description-left_subtitle::after {
+    position: relative;
+    content: url("/dist/assets/images/right-arrow-black.svg");
+    margin-left: 1rem;
+    top: 0; }
 
 @media only screen and (min-width: 992px) {
   .section-description-left {
