@@ -93,11 +93,11 @@ function changeLangColor() {
 window.addEventListener("scroll", changeLangColor);
 
 function changeSocialColors() {
-  if (percentage >= 66 && window.screen.width >= 992) {
+  if (percentage >= 64 && window.screen.width >= 992) {
     socialItems.forEach((item) => {
       item.classList.add("social__item--dark-mode");
     });
-  } else if (percentage <= 65 && window.screen.width >= 992) {
+  } else if (percentage <= 63 && window.screen.width >= 992) {
     socialItems.forEach((item) => {
       item.classList.remove("social__item--dark-mode");
     });
