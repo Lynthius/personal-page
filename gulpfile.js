@@ -35,7 +35,7 @@ function minHtml() {
 
 function minCss() {
   console.log("One moment I'm building CSS distribution version!");
-  return gulp.src("src/css/**/*.css")
+  return gulp.src("dist/css/**/*.css")
   .pipe(minStyle())
   .pipe(gulp.dest("dist/css"));
 }
