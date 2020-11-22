@@ -1150,9 +1150,9 @@ footer {
 }
 
 .section-description-right {
+  z-index: -1;
   order: 1;
   font-size: 2.2rem;
-  line-height: 0;
   flex: 1;
   text-align: center;
   &_subtitle::before {
@@ -1173,11 +1173,9 @@ footer {
   }
 }
 
-
 .section-description-left {
-  // order: 1;
+  z-index: -1;
   font-size: 2.2rem;
-  line-height: 0;
   flex: 1;
   text-align: center;
   &_subtitle::after {
@@ -1254,4 +1252,5 @@ footer {
 .add,
 .remove {
   pointer-events: none;
+  padding: 2px;
 }

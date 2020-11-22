@@ -824,9 +824,9 @@ footer {
   order: 2; }
 
 .section-description-right {
+  z-index: -1;
   order: 1;
   font-size: 2.2rem;
-  line-height: 0;
   flex: 1;
   text-align: center; }
   .section-description-right_subtitle::before {
@@ -843,8 +843,8 @@ footer {
     padding-top: 10rem; } }
 
 .section-description-left {
+  z-index: -1;
   font-size: 2.2rem;
-  line-height: 0;
   flex: 1;
   text-align: center; }
   .section-description-left_subtitle::after {
@@ -906,4 +906,5 @@ footer {
 .translate__question8,
 .add,
 .remove {
-  pointer-events: none; }
+  pointer-events: none;
+  padding: 2px; }
