@@ -55,8 +55,6 @@ a {
   color: #ffffff;
   background-position: -100%; }
 
-<<<<<<< HEAD
-=======
 .cursor {
   position: fixed;
   top: 50%;
@@ -78,7 +76,6 @@ a {
   position: absolute;
   bottom: 100%; }
 
->>>>>>> master
 /* General styles and media queries
 ---------------------------------------------------------------------- */
 .hero-canvas {
@@ -165,10 +162,6 @@ a {
   background-color: #ffffff; }
 
 .navigation-container {
-<<<<<<< HEAD
-  z-index: 1;
-=======
->>>>>>> master
   position: fixed;
   background-color: #ffffff;
   left: 0;
@@ -325,10 +318,7 @@ a {
         background: #ffffff; } }
 
 .hero-header__heading {
-<<<<<<< HEAD
   z-index: -1;
-=======
->>>>>>> master
   position: absolute;
   left: 2rem;
   right: 2rem;
