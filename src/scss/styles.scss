@@ -65,26 +65,27 @@ a {
   background-position: -100%;
 }
 
-// .cursor {
-//   position: fixed;
-//   top: 50%;
-//   left: 50%;
-//   width: 20px;
-//   height: 20px;
-//   border: 2px solid red;
-//   box-sizing: border-box;
-//   transition: 0 .5s;
-//   transform: translate(-50%, -50%);
-//   border-radius: 50%;
-//   pointer-events: none;
-// }
-// .cursor::after {
-//   content: "Move your mouse around photo!";
-//   width: 240px;
-//   font-size: 1.6rem;
-//   position: absolute;
-//   bottom: 100%;
-// }
+.cursor {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  box-sizing: border-box;
+  transition: 0 .5s;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  transition: opacity .5s ease-in-out;
+}
+.cursor::after {
+  content: "Move your mouse around photo";
+  width: 240px;
+  font-size: 1.6rem;
+  position: absolute;
+  bottom: 100%;
+}
 
 /* General styles and media queries
 ---------------------------------------------------------------------- */
@@ -192,7 +193,10 @@ a {
 }
 
 .navigation-container {
+<<<<<<< HEAD
   z-index: 1;
+=======
+>>>>>>> master
   position: fixed;
   background-color: #ffffff;
   left: 0;
