@@ -44,6 +44,9 @@ a {
   font-weight: 700;
   text-decoration: none; }
 
+.activeLang {
+  border-bottom: .2rem solid #000 !important; }
+
 .highlight {
   font-weight: 600;
   background-image: linear-gradient(to right, transparent 50%, black 50%);
@@ -902,36 +905,36 @@ footer {
   font-size: 2.2rem;
   flex: 1;
   text-align: center; }
-  .section-description-right_subtitle::before {
-    position: relative;
-    content: url("/dist/assets/images/left-arrow-black.svg");
-    margin-right: 1rem;
-    top: 0; }
 
 @media only screen and (min-width: 992px) {
   .section-description-right {
     font-size: 2.8rem;
     flex: 1;
     text-align: right;
-    padding-top: 10rem; } }
+    padding-top: 10rem; }
+    .section-description-right_subtitle::before {
+      position: relative;
+      content: url("/dist/assets/images/left-arrow-black.svg");
+      margin-right: 1rem;
+      top: 0; } }
 
 .section-description-left {
   z-index: -1;
   font-size: 2.2rem;
   flex: 1;
   text-align: center; }
-  .section-description-left_subtitle::after {
-    position: relative;
-    content: url("/dist/assets/images/right-arrow-black.svg");
-    margin-left: 1rem;
-    top: 0; }
 
 @media only screen and (min-width: 992px) {
   .section-description-left {
     font-size: 2.8rem;
     flex: 1;
     text-align: left;
-    padding-top: 10rem; } }
+    padding-top: 10rem; }
+    .section-description-left_subtitle::after {
+      position: relative;
+      content: url("/dist/assets/images/right-arrow-black.svg");
+      margin-left: 1rem;
+      top: 0; } }
 
 .accordion__item {
   width: 100%; }

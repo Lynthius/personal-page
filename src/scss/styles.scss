@@ -51,6 +51,10 @@ a {
   text-decoration: none;
 }
 
+.activeLang {
+  border-bottom: .2rem solid #000 !important;
+}
+
 .highlight {
   font-weight: 600;
   background-image: linear-gradient(to right, transparent 50%, black 50%);
@@ -1231,13 +1235,6 @@ footer {
   font-size: 2.2rem;
   flex: 1;
   text-align: center;
-
-  &_subtitle::before {
-    position: relative;
-    content: url("/dist/assets/images/left-arrow-black.svg");
-    margin-right: 1rem;
-    top: 0;
-  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -1247,6 +1244,13 @@ footer {
     flex: 1;
     text-align: right;
     padding-top: 10rem;
+
+    &_subtitle::before {
+      position: relative;
+      content: url("/dist/assets/images/left-arrow-black.svg");
+      margin-right: 1rem;
+      top: 0;
+    }
   }
 }
 
@@ -1255,13 +1259,6 @@ footer {
   font-size: 2.2rem;
   flex: 1;
   text-align: center;
-
-  &_subtitle::after {
-    position: relative;
-    content: url("/dist/assets/images/right-arrow-black.svg");
-    margin-left: 1rem;
-    top: 0;
-  }
 }
 
 @media only screen and (min-width: 992px) {
@@ -1271,6 +1268,13 @@ footer {
     flex: 1;
     text-align: left;
     padding-top: 10rem;
+
+    &_subtitle::after {
+      position: relative;
+      content: url("/dist/assets/images/right-arrow-black.svg");
+      margin-left: 1rem;
+      top: 0;
+    }
   }
 }
 

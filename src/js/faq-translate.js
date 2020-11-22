@@ -149,11 +149,15 @@ function updateContent() {
 
 function switchToPl() {
   i18next.changeLanguage("pl");
+  langpl.classList.add("activeLang");
+  langen.classList.remove("activeLang");
   window.localStorage.setItem("lang", window.i18next.language);
 }
 
 function switchToEn() {
   i18next.changeLanguage("en");
+  langen.classList.add("activeLang");
+  langpl.classList.remove("activeLang");
   window.localStorage.setItem("lang", window.i18next.language);
 }
 
@@ -166,4 +170,11 @@ langen.addEventListener("click", switchToEn);
 
 window.onload = function () {
   i18next.changeLanguage(window.localStorage.lang);
+  if (window.localStorage.lang == "pl") {
+    langpl.classList.add("activeLang");
+    langen.classList.remove("activeLang");
+  } else {
+    langen.classList.add("activeLang");
+    langpl.classList.remove("activeLang");
+  }
 };

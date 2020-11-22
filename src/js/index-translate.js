@@ -71,7 +71,7 @@ function updateContent() {
   about.innerHTML = i18next.t("about");
   gallery.innerHTML = i18next.t("gallery");
   contact.innerHTML = i18next.t("contact");
-  
+
   textPath.innerHTML = i18next.t("textPath");
   aboutHeaderSection.innerHTML = i18next.t("aboutHeaderSection");
   aboutSection.innerHTML = i18next.t("aboutSection");
@@ -87,11 +87,15 @@ function updateContent() {
 
 function switchToPl() {
   i18next.changeLanguage("pl");
+  langpl.classList.add("activeLang");
+  langen.classList.remove("activeLang");
   window.localStorage.setItem("lang", window.i18next.language);
 }
 
 function switchToEn() {
   i18next.changeLanguage("en");
+  langen.classList.add("activeLang");
+  langpl.classList.remove("activeLang");
   window.localStorage.setItem("lang", window.i18next.language);
 }
 
@@ -104,4 +108,12 @@ langen.addEventListener("click", switchToEn);
 
 window.onload = function () {
   i18next.changeLanguage(window.localStorage.lang);
+  console.log(window.localStorage);
+  if (window.localStorage.lang == "pl") {
+    langpl.classList.add("activeLang");
+    langen.classList.remove("activeLang");
+  } else {
+    langen.classList.add("activeLang");
+    langpl.classList.remove("activeLang");
+  }
 };

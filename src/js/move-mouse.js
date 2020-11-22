@@ -8,7 +8,7 @@ function hideCursorInfo() {
     circle.style.zIndex = -1;
   } else if (percentage < 20) {
     circle.style.opacity = 1;
-    circle.style.zIndex = 1;
+    circle.style.zIndex = 0;
   }
 }
 window.addEventListener("scroll", hideCursorInfo);
