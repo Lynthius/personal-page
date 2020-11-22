@@ -25,7 +25,6 @@ body {
   font-family: "Muli", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  // cursor: none;
 }
 
 img {
@@ -65,27 +64,95 @@ a {
   background-position: -100%;
 }
 
-.cursor {
+.circle {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 20px;
-  height: 20px;
+  width: 220px;
   opacity: 0;
-  box-sizing: border-box;
-  transition: 0 .5s;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-  pointer-events: none;
-  transition: opacity .5s ease-in-out;
+  transition-property: opacity;
+  transition-duration: .5s;
+  transition-timing-function: ease-in;
+  transition-delay: 0;
 }
 
-.cursor::after {
-  content: "Move your mouse around photo";
-  width: 240px;
-  font-size: 1.6rem;
-  position: absolute;
-  bottom: 100%;
+.circle text {
+  font-size: 20px;
+}
+
+.circle svg {
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  -webkit-animation-name: rotate;
+  -moz-animation-name: rotate;
+  -ms-animation-name: rotate;
+  -o-animation-name: rotate;
+  animation-name: rotate;
+  -webkit-animation-duration: 6s;
+  -moz-animation-duration: 6s;
+  -ms-animation-duration: 6s;
+  -o-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  -ms-animation-iteration-count: infinite;
+  -o-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -ms-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(360deg);
+  }
+
+  to {
+    -webkit-transform: rotate(0);
+  }
+}
+
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(360deg);
+  }
+
+  to {
+    -moz-transform: rotate(0);
+  }
+}
+
+@-ms-keyframes rotate {
+  from {
+    -ms-transform: rotate(360deg);
+  }
+
+  to {
+    -ms-transform: rotate(0);
+  }
+}
+
+@-o-keyframes rotate {
+  from {
+    -o-transform: rotate(360deg);
+  }
+
+  to {
+    -o-transform: rotate(0);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
 }
 
 /* General styles and media queries
@@ -427,7 +494,7 @@ a {
 
 @media only screen and (min-width: 991px) {
   .hero-header__heading {
-    z-index: 1;
+    z-index: 0;
   }
 }
 
