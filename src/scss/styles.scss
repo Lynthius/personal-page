@@ -192,7 +192,7 @@ a {
 }
 
 .navigation-container {
-  z-index: 999;
+  // z-index: 1;
   position: fixed;
   background-color: #ffffff;
   left: 0;
@@ -1077,7 +1077,7 @@ footer {
 }
 
 .faq {
-  padding: 4rem 2rem 4rem 2rem;
+  padding: 12rem 2rem 4rem 2rem;
   justify-content: space-between;
   align-items: center;
 }
@@ -1085,7 +1085,7 @@ footer {
 @media only screen and (min-width: 992px) {
   .faq {
     max-width: 100%;
-    padding: 8rem 15rem 5rem 15rem;
+    padding: 12rem 15rem 5rem 15rem;
 
     &__heading {
       line-height: 6rem;
