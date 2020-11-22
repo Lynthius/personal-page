@@ -14,6 +14,7 @@ const collabParagraph = document.querySelector(".collaborate__paragraph");
 const collabCv = document.querySelector(".collaborate__cv");
 const namePlaceholder = document.querySelector(".contact__input");
 const messagePlaceholder = document.querySelector(".contact__area");
+const textPath = document.querySelector(".text-path");
 
 i18next.init({
   lng: "en",
@@ -21,6 +22,7 @@ i18next.init({
   resources: {
     en: {
       translation: {
+        textPath: "Move your mouse to animate the photo!",
         faq: "FAQ",
         about: "about",
         gallery: "gallery",
@@ -40,6 +42,7 @@ i18next.init({
     },
     pl: {
       translation: {
+        textPath: "Ruszaj kursorem, aby animować zdjęcie!",
         faq: "FAQ",
         about: "o mnie",
         gallery: "galeria",
@@ -68,6 +71,8 @@ function updateContent() {
   about.innerHTML = i18next.t("about");
   gallery.innerHTML = i18next.t("gallery");
   contact.innerHTML = i18next.t("contact");
+  
+  textPath.innerHTML = i18next.t("textPath");
   aboutHeaderSection.innerHTML = i18next.t("aboutHeaderSection");
   aboutSection.innerHTML = i18next.t("aboutSection");
   contactHeaderSection.innerHTML = i18next.t("contactHeaderSection");
