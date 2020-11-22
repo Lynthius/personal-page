@@ -79,6 +79,7 @@ a {
   pointer-events: none;
   transition: opacity .5s ease-in-out;
 }
+
 .cursor::after {
   content: "Move your mouse around photo";
   width: 240px;
@@ -193,6 +194,7 @@ a {
 }
 
 .navigation-container {
+  z-index: 1;
   position: fixed;
   background-color: #ffffff;
   left: 0;
@@ -212,7 +214,7 @@ a {
 .lang-switcher {
   position: fixed;
   top: 50px;
-  left: 280px;
+  right: 0;
   padding: 3.6rem 2.5rem 0 0;
 
   button {
@@ -409,7 +411,6 @@ a {
 }
 
 .hero-header__heading {
-  z-index: -1;
   position: absolute;
   left: 2rem;
   right: 2rem;
@@ -421,6 +422,12 @@ a {
 
   &--bigger {
     font-size: 20vw;
+  }
+}
+
+@media only screen and (min-width: 991px) {
+  .hero-header__heading {
+    z-index: 1;
   }
 }
 
@@ -1156,6 +1163,7 @@ footer {
   font-size: 2.2rem;
   flex: 1;
   text-align: center;
+
   &_subtitle::before {
     position: relative;
     content: url("/dist/assets/images/left-arrow-black.svg");
@@ -1179,6 +1187,7 @@ footer {
   font-size: 2.2rem;
   flex: 1;
   text-align: center;
+
   &_subtitle::after {
     position: relative;
     content: url("/dist/assets/images/right-arrow-black.svg");

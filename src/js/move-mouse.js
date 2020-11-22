@@ -21,7 +21,6 @@ window.onload = function () {
 function hideLangSwitch() {
   if (percentage > 20) {
     cursor.style.opacity = 0;
-    console.log("now!")
   }
 }
 window.addEventListener("scroll", hideLangSwitch);
