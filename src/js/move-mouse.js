@@ -5,8 +5,10 @@ const btns = document.querySelectorAll("button");
 function hideCursorInfo() {
   if (percentage > 20) {
     circle.style.opacity = 0;
+    circle.style.zIndex = -1;
   } else if (percentage < 20) {
     circle.style.opacity = 1;
+    circle.style.zIndex = 1;
   }
 }
 window.addEventListener("scroll", hideCursorInfo);
@@ -15,22 +17,28 @@ anchors.forEach((anchor) => {
   if (percentage < 20) {
     anchor.onmouseover = function () {
       circle.style.opacity = 0;
+      circle.style.zIndex = -1;
     };
     anchor.onmouseleave = function () {
       if (percentage < 20) {
         circle.style.opacity = 1;
+        circle.style.zIndex = 0;
       }
     };
   }
 });
 
 btns.forEach((btn) => {
-  btn.onmouseover = function () {
-    circle.style.opacity = 0;
-  };
   if (percentage < 20) {
+    btn.onmouseover = function () {
+      circle.style.opacity = 0;
+      circle.style.zIndex = -1;
+    };
     btn.onmouseleave = function () {
-      circle.style.opacity = 1;
+      if (percentage < 20) {
+        circle.style.opacity = 1;
+        circle.style.zIndex = 0;
+      }
     };
   }
 });
@@ -47,8 +55,5 @@ window.onload = function () {
   clearTimeout(timeout);
   timeout = setTimeout(function () {
     circle.style.opacity = 1;
-    setTimeout(function () {
-      circle.style.opacity = 0;
-    }, 1000000000);
   }, 500);
 };

@@ -693,7 +693,8 @@ a {
       height: 16rem;
       margin: 3rem 0 3rem 0; }
     .contact__button {
-      margin: 0; } }
+      margin: 0;
+      cursor: pointer; } }
 
 @media only screen and (min-width: 1680px) {
   .coffee-canvas {
