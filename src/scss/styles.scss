@@ -192,7 +192,7 @@ a {
 }
 
 .navigation-container {
-  // z-index: 1;
+  z-index: 1;
   position: fixed;
   background-color: #ffffff;
   left: 0;
@@ -409,6 +409,7 @@ a {
 }
 
 .hero-header__heading {
+  z-index: -1;
   position: absolute;
   left: 2rem;
   right: 2rem;

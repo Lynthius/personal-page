@@ -71,32 +71,6 @@ function closeMenu() {
 }
 links.forEach((link) => link.addEventListener("click", closeMenu));
 
-// function changeNavColor() {
-//   if (percentage >= 87 && window.screen.width >= 992) {
-//     navItems.forEach((item) => {
-//       item.classList.add("navigation__item--dark-mode");
-//     });
-//   } else {
-//     navItems.forEach((item) => {
-//       item.classList.remove("navigation__item--dark-mode");
-//     });
-//   }
-// }
-// window.addEventListener("scroll", changeNavColor);
-
-// function changeLangColor() {
-//   if (percentage >= 89 && window.screen.width >= 992) {
-//     langSwitchItems.forEach((item) => {
-//       item.classList.add("lang-switcher--dark-mode");
-//     });
-//   } else if (percentage <= 88 && window.screen.width >= 992) {
-//     langSwitchItems.forEach((item) => {
-//       item.classList.remove("lang-switcher--dark-mode");
-//     });
-//   }
-// }
-// window.addEventListener("scroll", changeLangColor);
-
 function changeSocialColors() {
   if (percentage >= 84 && window.screen.width >= 992) {
     socialItems.forEach((item) => {
@@ -109,23 +83,6 @@ function changeSocialColors() {
   }
 }
 window.addEventListener("scroll", changeSocialColors);
-
-// function showAboutText() {
-//   if (percentage > 16) {
-//     aboutText.style.opacity = 1;
-//   } else if (percentage < 16) {
-//     aboutText.style.opacity = 0;
-//   }
-// }
-// window.addEventListener("scroll", showAboutText);
-
-// function showPargraphText() {
-//   if (percentage > 70) {
-//     contactTxt.style.opacity = 1;
-//     contactHead.style.opacity = 1;
-//   }
-// }
-// window.addEventListener("scroll", showPargraphText);
 
 function changeBtnAriaState(e) {
   const btn = e.target;
@@ -164,4 +121,3 @@ function revealContent(e) {
 }
 
 faqBtns.forEach((btn) => btn.addEventListener("click", revealContent));
-// document.addEventListener("click", revealContent);
