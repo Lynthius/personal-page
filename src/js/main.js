@@ -6,7 +6,7 @@ const links = document.querySelectorAll("a");
 const aboutText = document.querySelector(".about__description");
 const contactTxt = document.querySelector(".contact__paragraph");
 const contactHead = document.querySelector(".contact__heading");
-const langSwitchItems = document.querySelectorAll(".lang-switcher")
+const langSwitchItems = document.querySelectorAll(".lang-switcher");
 const langSwitch = document.querySelector(".lang-switcher");
 const activeLang = document.querySelector(".activeLang");
 
@@ -68,27 +68,55 @@ function closeMenu() {
 links.forEach((link) => link.addEventListener("click", closeMenu));
 
 function changeNavColor() {
-  if (percentage >= 87 && window.screen.width >= 992) {
-    navItems.forEach((item) => {
-      item.classList.add("navigation__item--dark-mode");
-    });
-  } else {
-    navItems.forEach((item) => {
-      item.classList.remove("navigation__item--dark-mode");
-    });
+  // Medium screens scroll percentage (less than 1001)
+  if (window.innerHeight < 1001) {
+    if (percentage >= 86 && window.screen.width >= 992) {
+      navItems.forEach((item) => {
+        item.classList.add("navigation__item--dark-mode");
+      });
+    } else {
+      navItems.forEach((item) => {
+        item.classList.remove("navigation__item--dark-mode");
+      });
+    }
+    // Large screens scroll percentage (more than 1001)
+  } else if (window.innerHeight >= 1001) {
+    if (percentage >= 87 && window.screen.width >= 992) {
+      navItems.forEach((item) => {
+        item.classList.add("navigation__item--dark-mode");
+      });
+    } else {
+      navItems.forEach((item) => {
+        item.classList.remove("navigation__item--dark-mode");
+      });
+    }
   }
 }
 window.addEventListener("scroll", changeNavColor);
 
 function changeLangColor() {
-  if (percentage >= 89 && window.screen.width >= 992) {
-    langSwitchItems.forEach((item) => {
-      item.classList.add("lang-switcher--dark-mode");
-    });
-  } else if (percentage <= 88 && window.screen.width >= 992) {
-    langSwitchItems.forEach((item) => {
-      item.classList.remove("lang-switcher--dark-mode");
-    });
+  // Medium screens scroll percentage (less than 1001)
+  if (window.innerHeight < 1001) {
+    if (percentage >= 86 && window.screen.width >= 992) {
+      langSwitchItems.forEach((item) => {
+        item.classList.add("lang-switcher--dark-mode");
+      });
+    } else if (percentage <= 85 && window.screen.width >= 992) {
+      langSwitchItems.forEach((item) => {
+        item.classList.remove("lang-switcher--dark-mode");
+      });
+    }
+    // Large screens scroll percentage (more than 1001)
+  } else if (window.innerHeight >= 1001) {
+    if (percentage >= 89 && window.screen.width >= 992) {
+      langSwitchItems.forEach((item) => {
+        item.classList.add("lang-switcher--dark-mode");
+      });
+    } else if (percentage <= 88) {
+      langSwitchItems.forEach((item) => {
+        item.classList.remove("lang-switcher--dark-mode");
+      });
+    }
   }
 }
 window.addEventListener("scroll", changeLangColor);
