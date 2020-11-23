@@ -141,7 +141,7 @@ a {
   background: url(/dist/assets/images/hero-image.webp);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 0% 22%;
+  background-position: 0% 16%;
   height: 100vh; }
 
 @media only screen and (min-width: 992px) {
@@ -376,7 +376,7 @@ a {
   position: absolute;
   left: 2rem;
   right: 2rem;
-  bottom: 2rem;
+  bottom: 7rem;
   margin: 0;
   font-size: 10vw;
   line-height: auto;
@@ -422,7 +422,7 @@ a {
 .about {
   display: flex;
   flex-direction: column-reverse;
-  padding: 4rem 2rem 4rem 2rem; }
+  padding: 0rem 2rem 4rem 2rem; }
   .about__image {
     max-width: 100%;
     align-self: flex-end;
@@ -496,10 +496,9 @@ a {
 
 .gallery {
   display: flex;
-  height: 100vh;
   flex-direction: column;
   justify-content: center;
-  padding: 11.3rem 2rem 4rem 2rem; }
+  padding: 12rem 2rem 4rem 2rem; }
   .gallery__nav {
     display: inline-block;
     font-family: "Muli", sans-serif;
