@@ -456,6 +456,12 @@ a {
     .about__image {
       width: 48rem; } }
 
+@media only screen and (min-width: 2100px) {
+  .about {
+    padding: 5rem 40rem 5rem 40rem; }
+    .about__image {
+      width: 48rem; } }
+
 @media (max-width: 812px) and (orientation: landscape) {
   .about {
     flex-direction: row;
@@ -583,6 +589,12 @@ a {
     padding: 5rem 30rem 5rem 30rem; }
   .carousel {
     height: 48rem; } }
+
+@media only screen and (min-width: 2100px) {
+  .gallery {
+    padding: 5rem 40rem 5rem 40rem; }
+  .carousel {
+    height: 53rem; } }
 
 .coffee-container {
   order: 1;
@@ -719,6 +731,13 @@ a {
     .contact__area {
       width: 58rem;
       height: 28rem; } }
+
+@media only screen and (min-width: 2100px) {
+  .contact {
+    padding: 2rem 40rem 5rem 40rem;
+    align-content: center; }
+    .contact__area {
+      width: 68rem; } }
 
 footer {
   border-top: 0.4px solid rgba(255, 255, 255, 0.2); }

@@ -54,6 +54,7 @@ a {
 .activeLang {
   border-bottom: .2rem solid #000 !important;
 }
+
 .activeLang--dark-mode {
   border-bottom: .2rem solid #ffffff !important;
 }
@@ -313,7 +314,7 @@ a {
     }
 
     .activeLang {
-      border-bottom-color: #ffffff !important; 
+      border-bottom-color: #ffffff !important;
     }
 
     color: #ffffff;
@@ -603,6 +604,16 @@ a {
   }
 }
 
+@media only screen and (min-width: 2100px) {
+  .about {
+    padding: 5rem 40rem 5rem 40rem;
+
+    &__image {
+      width: 48rem;
+    }
+  }
+}
+
 @media (max-width: 812px) and (orientation: landscape) {
   .about {
     flex-direction: row;
@@ -781,6 +792,16 @@ a {
 
   .carousel {
     height: 48rem;
+  }
+}
+
+@media only screen and (min-width: 2100px) {
+  .gallery {
+    padding: 5rem 40rem 5rem 40rem;
+  }
+
+  .carousel {
+    height: 53rem;
   }
 }
 
@@ -967,6 +988,17 @@ a {
     &__area {
       width: 58rem;
       height: 28rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 2100px) {
+  .contact {
+    padding: 2rem 40rem 5rem 40rem;
+    align-content: center;
+
+    &__area {
+      width: 68rem;
     }
   }
 }
