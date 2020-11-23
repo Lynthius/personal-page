@@ -8,6 +8,7 @@ const contactTxt = document.querySelector(".contact__paragraph");
 const contactHead = document.querySelector(".contact__heading");
 const langSwitchItems = document.querySelectorAll(".lang-switcher")
 const langSwitch = document.querySelector(".lang-switcher");
+const activeLang = document.querySelector(".activeLang");
 
 // Percent of scrolled window for if statement in the next function
 var percentage = 0;

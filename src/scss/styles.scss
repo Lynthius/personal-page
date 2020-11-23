@@ -54,6 +54,9 @@ a {
 .activeLang {
   border-bottom: .2rem solid #000 !important;
 }
+.activeLang--dark-mode {
+  border-bottom: .2rem solid #ffffff !important;
+}
 
 .highlight {
   font-weight: 600;
@@ -307,6 +310,10 @@ a {
 
     button {
       color: #ffffff;
+    }
+
+    .activeLang {
+      border-bottom-color: #ffffff !important; 
     }
 
     color: #ffffff;

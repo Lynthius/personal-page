@@ -3,7 +3,7 @@ const anchors = document.querySelectorAll("a");
 const btns = document.querySelectorAll("button");
 
 function hideCursorInfo() {
-  if (percentage > 20) {
+  if (percentage > 20 && window.screen.width >= 992) {
     circle.style.opacity = 0;
     circle.style.zIndex = -1;
   } else if (percentage < 20) {
@@ -14,13 +14,13 @@ function hideCursorInfo() {
 window.addEventListener("scroll", hideCursorInfo);
 
 anchors.forEach((anchor) => {
-  if (percentage < 20) {
+  if (percentage < 20 && window.screen.width >= 992) {
     anchor.onmouseover = function () {
       circle.style.opacity = 0;
       circle.style.zIndex = -1;
     };
     anchor.onmouseleave = function () {
-      if (percentage < 20) {
+      if (percentage < 20 && window.screen.width >= 992) {
         circle.style.opacity = 1;
         circle.style.zIndex = 0;
       }
@@ -29,13 +29,13 @@ anchors.forEach((anchor) => {
 });
 
 btns.forEach((btn) => {
-  if (percentage < 20) {
+  if (percentage < 20 && window.screen.width >= 992) {
     btn.onmouseover = function () {
       circle.style.opacity = 0;
       circle.style.zIndex = -1;
     };
     btn.onmouseleave = function () {
-      if (percentage < 20) {
+      if (percentage < 20 && window.screen.width >= 992) {
         circle.style.opacity = 1;
         circle.style.zIndex = 0;
       }
