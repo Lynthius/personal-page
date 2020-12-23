@@ -28,7 +28,12 @@ i18next.init({
         gallery: "gallery",
         contact: "contact",
         aboutHeaderSection: "About",
-        aboutSection: `Welcome! My name is Tomasz and I'm a <a href="https://www.instagram.com/tomasz_przyborowski/" target="_blank"><span class="highlight">product photographer</span></a> and <a href="https://github.com/Lynthius" target="_blank"> <span class="highlight">web developer</span></a> from Poland. I've fallen in love with front-end technologies, especially JavaScript and React. I'm also Yllwduck project creator - place for people in tech that want to learn new skills, or share their knowledge.`,
+        aboutSection: `Welcome! My name is Tomasz and I'm a <a
+        href="https://www.instagram.com/tomasz_przyborowski/" target="_blank"><span class="highlight">product
+          photographer</span></a> and <a href="https://github.com/Lynthius" target="_blank"> <span
+          class="highlight">web developer</span></a> from Poland. I've fallen in love with front-end technologies,
+      especially JS and React. I'm also <a href="https://github.com/yllwduck" target="_blank"><span class="highlight">yllwduck</span></a> project creator - place for people in tech that want to
+      learn new skills, or share their knowledge and member of <a href="https://github.com/CodersCrew/" target="_blank"><span class="highlight">CodersCrew</span></a> - non-profit organization.`,
         contactHeaderSection: "want to <br />grab a coffee?",
         contactSection: "Start by sending a message.",
         contactBtn: "send",
@@ -48,7 +53,7 @@ i18next.init({
         gallery: "galeria",
         contact: "kontakt",
         aboutHeaderSection: "O mnie",
-        aboutSection: `Cześć! Mam na imię Tomasz i jestem <a href="https://www.instagram.com/tomasz_przyborowski/" target="_blank"><span class="highlight">fotografem produktowym</span></a> oraz <a href="https://github.com/Lynthius" target="_blank"> <span class="highlight">web developerem</span></a> z Poznania. Interesują mnie technologie związane z front-endem, szczególnie JavaScript oraz React. Jestem również twórcą projektu Yllwduck - miejsca dla ludzi chcących się uczyć, lub dzielić wiedzą z zakresu web-dev'u.`,
+        aboutSection: `Cześć! Mam na imię Tomasz i jestem <a href="https://www.instagram.com/tomasz_przyborowski/" target="_blank"><span class="highlight">fotografem produktowym</span></a> oraz <a href="https://github.com/Lynthius" target="_blank"> <span class="highlight">web developerem</span></a> z Poznania. Interesują mnie technologie związane z front-endem, szczególnie JS oraz React. Jestem również twórcą projektu <a href="https://github.com/yllwduck" target="_blank"><span class="highlight">yllwduck</span></a> - miejsca dla ludzi chcących się uczyć, lub dzielić wiedzą z zakresu web-dev'u oraz członkiem <a href="https://github.com/CodersCrew/" target="_blank"><span class="highlight">CodersCrew</span></a> - organizacji non-profit.`,
         contactHeaderSection: "Wyskoczymy <br /> na kawę?",
         contactSection: "Wyślij do mnie wiadomość.",
         contactBtn: "wyślij",
