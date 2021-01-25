@@ -113,7 +113,6 @@ langen.addEventListener("click", switchToEn);
 
 window.onload = function () {
   i18next.changeLanguage(window.localStorage.lang);
-  console.log(window.localStorage);
   if (window.localStorage.lang == "pl") {
     langpl.classList.add("activeLang");
     langen.classList.remove("activeLang");
