@@ -57,7 +57,7 @@ i18next.init({
         question4: `I'm interested in a photo session, what should I do?`,
         answer4: `If you are interested in a <strong>product session</strong>, go to the contact section in the footer or the menu in the upper right corner. Contact me and <strong>provide details about the session</strong> - product description, number of photos needed, and information on whether the photos are to be taken in the studio or at location, e.g. in a restaurant or store.`,
         question5: `Do you create websites?`,
-        answer5: `Yes. Despite the fact that I’m still learning and developing my skills, I already have solid experience in <strong>creating websites</strong>. I had the opportunity to work with <strong>WordPress</strong> (using <strong>Bootstrap</strong> library), the <strong>Hexo</strong> framework for creating blogs, but also pure <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. Currently I’m testing and checking other technologies or libraries - mainly <strong>React</strong>.`,
+        answer5: `Yes. Despite the fact that I’m still learning and developing my skills, I already have some experience in <strong>creating websites</strong>. I had the opportunity to work with <strong>WordPress</strong> (using <strong>Bootstrap</strong> library), the <strong>Hexo</strong> framework for creating blogs, but also pure <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>. Currently I’m testing and checking other technologies or libraries - mainly <strong>React</strong>.`,
         question6: `Do you have a portfolio related to web development?`,
         answer6: `Almost all my projects can be found on <strong><a href="https://github.com/Lynthius" target="_blank"> <span class="highlight">github</span></a></strong> - not necessarily only those related to <strong>creating websites</strong>. The page you are on at the moment was also written by me using basic technologies and a few libraries.`,
         question7: `How much does it cost to make a simple website?`,
@@ -95,7 +95,7 @@ i18next.init({
         produktów, ilość potrzebnych zdjęć, oraz informację na temat tego czy zdjęcia mają zostać wykonane w studio, czy na miejscu np. w restauracji czy sklepie.`,
         question5: `Czy zajmujesz się tworzeniem stron internetowych?`,
         answer5: `Tak. Pomimo tego, że nadal się uczę i rozwijam swoje umiejętności to mam już
-        solidne doświadczenie w <strong>tworzeniu stron www</strong>. Miałem okazję pracować z
+        pewne doświadczenie w <strong>tworzeniu stron www</strong>. Miałem okazję pracować z
         pomocą <strong>WordPress</strong>'a, wykorzystując między innymi bibliotekę
         <strong>Bootstrap</strong>, framework'a <strong>Hexo</strong> do tworzenia blogów, ale również czystego <strong>HTML</strong>'a, <strong>CSS</strong>'a, oraz <strong>JavaScript</strong>'u. Obecnie testuję i sprawdzam inne technologie, czy biblioteki - głównie <strong>React</strong>.`,
         question6: `Czy posiadasz portfolio związane z web developmentem?`,
