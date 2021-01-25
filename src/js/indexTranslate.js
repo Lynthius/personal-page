@@ -30,9 +30,9 @@ i18next.init({
         aboutHeaderSection: "About",
         aboutSection: `Welcome! My name is Tomasz and I'm a <a
         href="https://www.instagram.com/tomasz_przyborowski/" target="_blank"><span class="highlight">product
-          photographer</span></a> and <a href="https://github.com/Lynthius" target="_blank"> <span
+          photographer</span></a> and enthusiast<a href="https://github.com/Lynthius" target="_blank"> <span
           class="highlight">web developer</span></a> from Poland. I've fallen in love with front-end technologies,
-      especially JS and React. I'm also <a href="https://github.com/yllwduck" target="_blank"><span class="highlight">yllwduck</span></a> project creator - place for people in tech that want to
+      especially JavaScript. Currently I'm learning React and Typescript. I'm also <a href="https://github.com/yllwduck" target="_blank"><span class="highlight">yllwduck</span></a> initiative creator - place for people in tech that want to
       learn new skills, or share their knowledge and member of <a href="https://github.com/CodersCrew/" target="_blank"><span class="highlight">CodersCrew</span></a> - non-profit organization.`,
         contactHeaderSection: "want to <br />grab a coffee?",
         contactSection: "Start by sending a message.",
