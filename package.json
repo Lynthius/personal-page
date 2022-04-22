@@ -22,7 +22,7 @@
     "gulp-sass": "^4.1.0"
   },
   "dependencies": {
-    "fullpage.js": "^3.0.9",
+    "fullpage.js": "^4.0.5",
     "gulp-concat": "^2.6.1",
     "gulp-css": "^0.1.0",
     "gulp-htmlmin": "^5.0.1",
